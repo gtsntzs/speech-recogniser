@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>soa.speech.recogniser</groupId>
+    <artifactId>sphinx4soc-parent</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <relativePath>../parent</relativePath>
+  </parent>
+
+  <groupId>soa.speech.recogniser</groupId>
+  <artifactId>components</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Sphinx4 Camel Components</name>
+
+  <modules>
+    <module>sphinx4soc-deltafeature</module>
+    <module>sphinx4soc-windower</module>
+    <module>sphinx4soc-microphone</module>
+  </modules>
+
+</project>

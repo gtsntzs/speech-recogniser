@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>soa.speech.recogniser</groupId>
+  <artifactId>sphinx4soc</artifactId>
+  <version>0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>cmu-sphinx4soc</module>
+    <module>components</module>
+    <module>sphinx4soc-lib</module>
+    <module>sphinx4-models</module>
+    <module>parent</module>
+  </modules>
+
+  <organization>
+    <name>Georgios Tsontzos</name>
+    <url>http://gtsntzs.de</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>gtsntzs</id>
+      <name>Georgios Tsontzos</name>
+      <url>http://gtsntzs.de</url>
+    </developer>
+  </developers>
+
+</project>
