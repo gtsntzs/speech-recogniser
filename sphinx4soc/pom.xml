@@ -130,7 +130,7 @@
           <skipDeploy>true</skipDeploy>
           <!-- Here add the report Plugins -->
           <reportPlugins>
-<!--             <plugin>
+            <!--             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-javadoc-plugin</artifactId>
               <version>${maven.javadoc.plugin}</version>
@@ -161,7 +161,7 @@
                     <report>summary</report>
                     <report>modules</report>
                     <report>license</report>
-<!--                     <report>project-team</report>
+                    <!--                     <report>project-team</report>
                     <report>scm</report>
                     <report>issue-tracking</report>
                     <report>dependencies</report>

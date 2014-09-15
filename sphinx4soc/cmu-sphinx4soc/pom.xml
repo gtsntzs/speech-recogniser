@@ -19,7 +19,7 @@
     to fit the needs of a service oriented approach.
   </description>
 
-  <url>${site.url}/archetypes</url>
+  <url>${site.url}/cmu-sphinx4soc</url>
 
   <distributionManagement>
     <site>
