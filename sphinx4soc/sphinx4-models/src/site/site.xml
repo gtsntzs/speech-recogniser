@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+         xmlns="http://maven.apache.org/DECORATION/1.3.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
+
+  <!-- Google Analytics not inherited for some reason
+  <googleAnalyticsAccountId>UA-54501187-1</googleAnalyticsAccountId>
+  -->
+
+  <bannerLeft>
+    <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
+    <name><![CDATA[<span class="color-highlight">Sphinx4soc</span> Models]]></name>
+  </bannerLeft>
+
+  <custom>
+    <reflowSkin>
+      <brand>
+        <!-- Brand text in top-left part of the site -->
+        <name><![CDATA[<span class="color-highlight">Back to </span>Main]]></name>
+        <href>http://gtsntzs.github.io/speech-recogniser/</href>
+      </brand>
+
+      <pages>
+        <index project="sphinx4-models" combine.self="override">
+          <!-- no ToC on the index page -->
+          <toc>false</toc>
+        </index>
+      </pages>
+    </reflowSkin>
+  </custom>
+
+  <body>
+    <breadcrumbs>
+      <item name="Sphinx4 :: Models" href="/" />
+    </breadcrumbs>
+  </body>
+</project>
