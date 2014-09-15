@@ -9,7 +9,7 @@
         <span class="color-highlight">CMU Sphinx4</span> in SOC Style
       ]]>
     </name>
-    <href>http://localhost:9000/</href>
+    <href>http://gtsntzs.github.io/speech-recogniser/</href>
   </bannerLeft>
 
   <publishDate position="bottom" format="yyyy-MM-dd" />
@@ -38,7 +38,7 @@
              <span class="color-highlight">CMU Sphinx4SOC</span> Project
           ]]>
         </name>
-        <href>http://localhost:9000/</href>
+        <href>http://gtsntzs.github.io/speech-recogniser/</href>
       </brand>
 
       <slogan>A scalable, modular speech recogniser.</slogan>
@@ -63,40 +63,40 @@
 
       <pages>
         <index project="reflow-parent">
-          <!-- Override the title -->
-          <titleTemplate>Sphinx4SOC</titleTemplate>
-          <!-- no breadcrumbs on the main index page -->
+          <titleTemplate>sphinx4soc</titleTemplate>
           <breadcrumbs>false</breadcrumbs>
-          <!-- no ToC on the main index page -->
           <toc>false</toc>
           <markPageHeader>true</markPageHeader>
           <sections>
-            <!-- <carousel /> -->
             <columns>2</columns>
             <body />
-            <sidebar />
           </sections>
         </index>
 
         <contribute>
           <breadcrumbs>false</breadcrumbs>
         </contribute>
+
         <!-- Disable source highlighting for Maven reports -->
         <source-repository>
           <highlightJs>false</highlightJs>
         </source-repository>
+
         <issue-tracking>
           <highlightJs>false</highlightJs>
           <toc>false</toc>
         </issue-tracking>
+
         <license>
           <highlightJs>false</highlightJs>
           <toc>false</toc>
         </license>
+
         <!-- Disable ToC for some Maven reports -->
         <project-info>
           <toc>false</toc>
         </project-info>
+
         <github-report>
           <toc>false</toc>
         </github-report>
@@ -110,7 +110,7 @@
   <body>
 
     <breadcrumbs>
-      <item name="Sphinx4SOC" href="/" />
+      <item name="Sphinx4soc" href="/" />
     </breadcrumbs>
 
     <menu name="Documentation" inherit="bottom">
@@ -144,7 +144,6 @@
       <item name="Contribute" href="contribute.html" />
       <item name="Issues" href="http://github.com/andriusvelykis/reflow-maven-skin/issues/" />
       <item name="Fork on GitHub" href="http://github.com/andriusvelykis/reflow-maven-skin/" />
-      <item name="Donate" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;amp;hosted_button_id=QWKNRFZH52828" />
     </menu>
 
     <menu name="Maven documentation" ref="reports" inherit="bottom" />

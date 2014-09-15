@@ -11,7 +11,7 @@
     <artifactId>sphinx4soc-lib</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>bundle</packaging>
-    <name>Library Sphinx Soa</name>
+    <name>Sphinx4soc Library</name>
 
     <dependencies>
         <dependency>

@@ -12,7 +12,7 @@
   <artifactId>cmu-sphinx4soc</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
-  <name>Sphinx4 Core Library</name>
+  <name>CMU Sphinx4soc Core Library</name>
 
   <description>
     The CMU sphinx Library.The official library API has some restrictions in method visibility, therefore cannot be extented
@@ -28,6 +28,11 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
     </dependency>
 
     <dependency>
