@@ -11,7 +11,22 @@
   <artifactId>sphinx4-models</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
+
   <name>Sphinx Models</name>
+
+  <description>
+    A simple jar container of the models loaded by the recogniser.
+  </description>
+
+  <url>${site.url}/cmu-sphinx4soc/sphinx4-models</url>
+
+  <distributionManagement>
+    <site>
+      <id>${site.deploy.id}</id>
+      <!-- Note that GitHub does not like having leading slash, so make it explicit -->
+      <url>${site.deploy.url}cmu-sphinx4soc/sphinx4-models</url>
+    </site>
+  </distributionManagement>
 
   <dependencies>
     <dependency>

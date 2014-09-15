@@ -11,7 +11,6 @@
   <description>
     Sphinx4soc Project Aggregator.
   </description>
-  <url>${site.url}</url>
 
   <modules>
     <module>cmu-sphinx4soc</module>
@@ -81,7 +80,9 @@
     <maven-compiler-plugin.version>2.5.1</maven-compiler-plugin.version>
     <github.site.maven.plugin.version>0.10-SNAPSHOT</github.site.maven.plugin.version>
   </properties>
+
   <!-- site generation -->
+  <url>${site.url}</url>
   <distributionManagement>
     <site>
       <name>Deployment through GitHub's site deployment plugin</name>
