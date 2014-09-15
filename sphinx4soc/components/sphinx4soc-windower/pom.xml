@@ -17,7 +17,6 @@
 	<name>Camel windower Component</name>
 
 	<dependencies>
-
     <dependency>
 		    <groupId>edu.cmu.sphinx</groupId>
 		    <artifactId>cmu-sphinx4soc</artifactId>
@@ -63,7 +62,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Bundle-SymbolicName>soa.speech.recogniser.sr-soa-frontend-windower</Bundle-SymbolicName>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Version>${project.version}</Bundle-Version>
 						<Export-Service>org.apache.camel.spi.ComponentResolver;component=window</Export-Service>
 					</instructions>
 				</configuration>
