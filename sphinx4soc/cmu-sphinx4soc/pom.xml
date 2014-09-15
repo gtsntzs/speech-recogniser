@@ -12,44 +12,44 @@
   <artifactId>cmu-sphinx4soc</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
-  <name>CMU Sphinx4soc Core Library</name>
 
+  <name>CMU Sphinx4soc Core Library</name>
   <description>
     The CMU sphinx Library.The official library API has some restrictions in method visibility, therefore cannot be extented
     to fit the needs of a service oriented approach.
   </description>
 
   <dependencies>
+    <!-- container -->
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.apache.felix.framework</artifactId>
+    </dependency>
+
+    <!-- logging -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
-
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
     </dependency>
-
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
     </dependency>
 
+    <!-- test -->
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-all</artifactId>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.apache.felix</groupId>
-      <artifactId>org.apache.felix.framework</artifactId>
     </dependency>
 
   </dependencies>
@@ -63,8 +63,8 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Bundle-SymbolicName>sphinx4-core</Bundle-SymbolicName>
-            <Bundle-Version>0.1-SNAPSHOT</Bundle-Version>
+            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+            <Bundle-Version>${project.version}</Bundle-Version>
           </instructions>
         </configuration>
       </plugin>
