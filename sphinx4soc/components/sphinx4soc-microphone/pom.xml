@@ -6,13 +6,13 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>components</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2</version>
   </parent>
 
   <groupId>org.apache.camel</groupId>
   <artifactId>sphinx4soc-microphone</artifactId>
   <packaging>bundle</packaging>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.2</version>
 
   <name>Camel Microphone Component</name>
 
