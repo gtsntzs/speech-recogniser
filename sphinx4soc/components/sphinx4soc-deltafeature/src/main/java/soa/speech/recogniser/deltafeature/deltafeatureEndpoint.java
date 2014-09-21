@@ -1,4 +1,4 @@
-package soa.speech.recogniser;
+package soa.speech.recogniser.deltafeature;
 
 import java.util.ArrayList;
 import java.util.List;

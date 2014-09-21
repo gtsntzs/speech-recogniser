@@ -1,9 +1,10 @@
-package soa.speech.recogniser;
+package soa.speech.recogniser.deltafeature;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.camel.AsyncCallback;
 import org.apache.camel.AsyncProcessor;
 import org.apache.camel.Consumer;
 import org.apache.camel.Endpoint;
@@ -21,27 +22,26 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The windower consumer.
+ * The deltafeature consumer.
  */
-public class windowerConsumer extends ServiceSupport implements Consumer, Runnable, ShutdownAware
+public class deltafeatureConsumer extends ServiceSupport implements Consumer, Runnable, ShutdownAware
 {
-    private final transient Logger LOG = LoggerFactory.getLogger(this.getClass().getName());
-    
-    private windowerEndpoint endpoint;
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+    private deltafeatureEndpoint endpoint;
     private AsyncProcessor processor;
     private ExecutorService executor;
     private ExceptionHandler exceptionHandler;
 
-    public windowerConsumer ( windowerEndpoint endpoint, Processor processor )
+    public deltafeatureConsumer ( deltafeatureEndpoint endpoint, Processor processor )
     {
         this.endpoint = endpoint;
-        this.processor = AsyncProcessorConverterHelper.convert(processor);
+        this.processor = AsyncProcessorConverterHelper.convert( processor );
     }
 
     @Override
     public String toString ()
     {
-        return "WindowerConsumer["+endpoint.getEndpointUri()+"]";
+        return "FeatureExtractorConsumer["+endpoint.getEndpointUri()+"]";
     }
 
     public Endpoint getEndpoint ()
@@ -49,7 +49,6 @@ public class windowerConsumer extends ServiceSupport implements Consumer, Runnab
         return endpoint;
     }
 
-    
     public ExceptionHandler getExceptionHandler ()
     {
         if ( exceptionHandler==null ) {
@@ -86,19 +85,18 @@ public class windowerConsumer extends ServiceSupport implements Consumer, Runnab
         BlockingQueue<Exchange> queue = endpoint.getQueue();
         while ( queue!=null&&isRunAllowed() ) {
             final Exchange exchange;
+
             try {
                 exchange = queue.poll( 1000, TimeUnit.MILLISECONDS );
             } catch ( InterruptedException e ) {
-                if ( LOG.isDebugEnabled() ) {
-                    LOG.debug( "Sleep interrupted, are we stopping? "+( isStopping()||isStopped() ) );
-                }
+                	logger.debug( "Sleep interrupted, are we stopping? "+( isStopping()||isStopped() ) );
                 continue;
             }
             if ( exchange!=null ) {
                 if ( isRunAllowed() ) {
                     try {
                         sendToConsumer( exchange );
-
+                        
                         // log exception if an exception occurred and was not handled
                         if ( exchange.getException()!=null ) {
                             getExceptionHandler().handleException( "Error processing exchange", exchange, exchange.getException() );
@@ -107,15 +105,11 @@ public class windowerConsumer extends ServiceSupport implements Consumer, Runnab
                         getExceptionHandler().handleException( "Error processing exchange", exchange, e );
                     }
                 } else {
-                    if ( LOG.isWarnEnabled() ) {
-                        LOG.warn( "This consumer is stopped during polling an exchange, so putting it back on the seda queue: "+exchange );
-                    }
+                    	logger.warn( "This consumer is stopped during polling an exchange, so putting it back on the seda queue: "+exchange );
                     try {
                         queue.put( exchange );
                     } catch ( InterruptedException e ) {
-                        if ( LOG.isDebugEnabled() ) {
-                            LOG.debug( "Sleep interrupted, are we stopping? "+( isStopping()||isStopped() ) );
-                        }
+                        	logger.debug( "Sleep interrupted, are we stopping? "+( isStopping()||isStopped() ) );
                         continue;
                     }
                 }
@@ -137,12 +131,12 @@ public class windowerConsumer extends ServiceSupport implements Consumer, Runnab
     protected void sendToConsumer ( Exchange exchange ) throws Exception
     {
         // use the regular processor and use the asynchronous routing engine to support it
-        AsyncProcessorHelper.process(processor, exchange);
+        AsyncProcessorHelper.process( processor, exchange);
     }
 
     protected void doStart () throws Exception
     {
-        int poolSize = 1; 
+        int poolSize = 1; //endpoint.getConcurrentConsumers();
         executor = endpoint.getCamelContext().getExecutorServiceManager().newFixedThreadPool( this, endpoint.getEndpointUri(), poolSize );
         for ( int i = 0; i<poolSize; i++ ) {
             executor.execute( this );
@@ -166,4 +160,5 @@ public class windowerConsumer extends ServiceSupport implements Consumer, Runnab
 	public void prepareShutdown(boolean forced) {
 		
 	}
+
 }

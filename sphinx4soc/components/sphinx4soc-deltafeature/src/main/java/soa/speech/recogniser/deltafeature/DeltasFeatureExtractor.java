@@ -9,7 +9,7 @@
  * WARRANTIES.
  *
  */
-package soa.speech.recogniser;
+package soa.speech.recogniser.deltafeature;
 
 import java.util.concurrent.BlockingQueue;
 

@@ -1,14 +1,14 @@
-package soa.speech.recogniser;
+package soa.speech.recogniser.windower;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.test.junit4.CamelTestSupport;
 import org.junit.Test;
 
-public class deltafeatureComponentTest extends CamelTestSupport {
+public class windowerComponentTest extends CamelTestSupport {
 
     @Test
-    public void testdeltafeature() throws Exception {
+    public void testwindower() throws Exception {
 //        MockEndpoint mock = getMockEndpoint("mock:result");
 //        mock.expectedMinimumMessageCount(1);       
 //        
@@ -19,8 +19,8 @@ public class deltafeatureComponentTest extends CamelTestSupport {
 //    protected RouteBuilder createRouteBuilder() throws Exception {
 //        return new RouteBuilder() {
 //            public void configure() {
-//                from("deltafeature://foo")
-//                  .to("deltafeature://bar")
+//                from("window://foo")
+//                  .to("window://bar")
 //                  .to("mock:result");
 //            }
 //        };

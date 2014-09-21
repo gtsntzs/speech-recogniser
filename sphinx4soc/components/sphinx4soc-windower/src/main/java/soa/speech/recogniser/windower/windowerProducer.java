@@ -1,4 +1,4 @@
-package soa.speech.recogniser;
+package soa.speech.recogniser.windower;
 
 import java.util.Arrays;
 import java.util.Map;
