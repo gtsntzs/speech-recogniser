@@ -7,13 +7,13 @@
   <parent>
     <artifactId>components</artifactId>
     <groupId>soa.speech.recogniser</groupId>
-    <version>0.2</version>
+    <version>0.3-SNAPSHOT</version>
   </parent>
 
-  <groupId>soa.speech.recogniser</groupId>
+  <groupId>soa.speech.recogniser.components</groupId>
   <artifactId>sphinx4soc-deltafeature</artifactId>
   <packaging>bundle</packaging>
-  <version>0.2</version>
+  <version>0.3-SNAPSHOT</version>
 
   <name>Camel Delta Features Component</name>
 
@@ -21,13 +21,13 @@
     Sphinx4soc Camel Delta Features Component calculates the delta of the mfcc features.
   </description>
 
-  <url>${site.url}components/sphinx4soc-deltafeature</url>
+  <url>${site.url}components/delta-component</url>
 
   <distributionManagement>
     <site>
       <id>${site.deploy.id}</id>
       <!-- Note that GitHub does not like having leading slash, so make it explicit -->
-      <url>${site.deploy.url}components/sphinx4soc-deltafeature</url>
+      <url>${site.deploy.url}components/delta-component</url>
     </site>
   </distributionManagement>
 

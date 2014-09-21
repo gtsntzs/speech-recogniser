@@ -3,20 +3,24 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>0.2</version>
+    <version>0.3-SNAPSHOT</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4-models</artifactId>
-  <version>0.2</version>
-  <packaging>bundle</packaging>
+  <version>0.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
 
-  <name>Sphinx Models</name>
+  <name>Sphinx4 Models</name>
 
   <description>
     A simple jar container of the models loaded by the recogniser.
   </description>
+
+  <modules>
+    <module>default</module>
+  </modules>
 
   <url>${site.url}/sphinx4-models</url>
 
@@ -27,39 +31,5 @@
       <url>${site.deploy.url}sphinx4-models</url>
     </site>
   </distributionManagement>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.felix</groupId>
-      <artifactId>org.apache.felix.framework</artifactId>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <configuration>
-          <encoding>${project.build.sourceEncoding}</encoding>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-            <Bundle-Version>${project.version}</Bundle-Version>
-            <Include-Resource>
-              default=src/main/resources/default
-            </Include-Resource>
-          </instructions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>

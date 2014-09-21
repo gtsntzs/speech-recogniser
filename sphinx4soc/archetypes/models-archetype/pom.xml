@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>soa.speech.recogniser</groupId>
+    <artifactId>archetypes</artifactId>
+    <version>0.3-SNAPSHOT</version>
+  </parent>
+
+  <groupId>soa.speech.recogniser.archetypes</groupId>
+  <artifactId>models-archetype</artifactId>
+  <version>0.3-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>Models :: Archetype</name>
+  <description>
+    Creates a new Sphinx4soc Models sample.
+  </description>
+
+  <url>${site.url}/archetypes/model-archetype</url>
+
+  <distributionManagement>
+    <site>
+      <id>${site.deploy.id}</id>
+      <url>${site.deploy.url}archetypes/model-archetype</url>
+    </site>
+  </distributionManagement>
+
+</project>

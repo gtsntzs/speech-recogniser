@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0
+                                          http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+                                          xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+                                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <requiredProperties>
+
+    <!--     archetype command extra input -->
+    <requiredProperty key="name"/>
+    <requiredProperty key="scheme"/>
+
+    <!-- project properties -->
+    <requiredProperty key="java-version">
+      <defaultValue>1.7</defaultValue>
+    </requiredProperty>
+
+    <!-- framework properties -->
+    <requiredProperty key="spring-version">
+      <defaultValue>4.0.6.RELEASE</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="camel-version">
+      <defaultValue>2.13.2</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="lucene-version">
+      <defaultValue>4.9.0</defaultValue>
+    </requiredProperty>
+
+    <!-- commons properties -->
+    <requiredProperty key="commons-io-version">
+      <defaultValue>2.4</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="commons-lang-version">
+      <defaultValue>3.3.2</defaultValue>
+    </requiredProperty>
+
+    <!-- web properties -->
+    <requiredProperty key="jersey-version">
+      <defaultValue>1.18.1</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="servlet-version">
+      <defaultValue>3.1.0</defaultValue>
+    </requiredProperty>
+
+    <!-- data format properties -->
+    <requiredProperty key="jackson-version">
+      <defaultValue>1.9.13</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="json-version">
+      <defaultValue>20140107</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="xstream-version">
+      <defaultValue>1.4.7</defaultValue>
+    </requiredProperty>
+
+    <!-- logging properties -->
+    <requiredProperty key="slf4j-version">
+      <defaultValue>1.7.7</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="log4j-version">
+      <defaultValue>1.2.17</defaultValue>
+    </requiredProperty>
+
+    <!-- test properties -->
+    <requiredProperty key="testng-version">
+      <defaultValue>6.8.8</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="mockito-version">
+      <defaultValue>1.9.5</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="junit-version">
+      <defaultValue>4.11</defaultValue>
+    </requiredProperty>
+
+    <!-- plugin properties -->
+    <requiredProperty key="maven-compiler-plugin-version">
+      <defaultValue>2.5.1</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="maven-resources-plugin-version">
+      <defaultValue>2.6</defaultValue>
+    </requiredProperty>
+
+  </requiredProperties>
+
+  <fileSets>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/test/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/test/resources</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/data</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>ReadMe.txt</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/site</directory>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>ReadMe.md</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
+

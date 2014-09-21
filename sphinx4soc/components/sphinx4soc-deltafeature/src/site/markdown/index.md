@@ -1,3 +1,8 @@
 ----
 
-## Sphinx4soc Deltafeature Component
+## Purpose
+
+Computing delta feature coefficients.
+
+## Configuration
+

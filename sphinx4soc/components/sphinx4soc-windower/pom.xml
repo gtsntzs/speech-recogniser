@@ -6,29 +6,33 @@
 	<parent>
 		<artifactId>components</artifactId>
 		<groupId>soa.speech.recogniser</groupId>
-		<version>0.2</version>
+		<version>0.3-SNAPSHOT</version>
 	</parent>
 
-	<groupId>soa.speech.recogniser</groupId>
+	<groupId>soa.speech.recogniser.components</groupId>
 	<artifactId>sphinx4soc-windower</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.2</version>
+	<version>0.3-SNAPSHOT</version>
 
-	<name>Camel Windower Component</name>
+	<name>Sphinx4soc Windower Camel Component</name>
 
   <description>
-    Sphinx4soc Camel Windower Component applies the window function over the audio signal.
+    Sphinx4soc Windower Camel Component applies the window function over the audio signal.
   </description>
 
-  <url>${site.url}/components/sphinx4soc-windower</url>
+  <url>${site.url}/components/windower-component</url>
 
   <distributionManagement>
     <site>
       <id>${site.deploy.id}</id>
       <!-- Note that GitHub does not like having leading slash, so make it explicit -->
-      <url>${site.deploy.url}components/sphinx4soc-windower</url>
+      <url>${site.deploy.url}components/windower-component</url>
     </site>
   </distributionManagement>
+
+  <properties>
+    <camel.osgi.export.service>org.apache.camel.spi.ComponentResolver;component=window</camel.osgi.export.service>
+  </properties>
 
 	<dependencies>
     <!-- sphinx4soc -->
@@ -69,22 +73,19 @@
 
 	<build>
 		<plugins>
-
 			<!-- to generate the MANIFEST-FILE of the bundle -->
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.7</version>
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Service>org.apache.camel.spi.ComponentResolver;component=window</Export-Service>
+						<Export-Service>${camel.osgi.export.service}</Export-Service>
 					</instructions>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
 

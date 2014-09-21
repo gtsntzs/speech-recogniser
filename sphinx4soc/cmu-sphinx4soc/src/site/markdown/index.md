@@ -1,3 +1,5 @@
 ----
 
-## CMU Sphinx4soc Libraŕy
+## Purpose
+
+The module is

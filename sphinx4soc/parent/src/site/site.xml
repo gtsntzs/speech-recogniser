@@ -31,8 +31,8 @@
   </custom>
 
   <body>
-    <breadcrumbs>
+<!--     <breadcrumbs>
       <item name="Sphinx4soc :: Parent" href="/" />
-    </breadcrumbs>
+    </breadcrumbs> -->
   </body>
 </project>

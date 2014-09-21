@@ -5,12 +5,12 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc</artifactId>
-    <version>0.2</version>
+    <version>0.3-SNAPSHOT</version>
   </parent>
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4soc-parent</artifactId>
-  <version>0.2</version>
+  <version>0.3-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Sphinx4soc :: Parent</name>
@@ -23,7 +23,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>1.7</java.version>
-    <sphinx4soc.version>0.1-SNAPSHOT</sphinx4soc.version>
+    <sphinx4soc.version>${project.version}</sphinx4soc.version>
     <!-- testing properties -->
     <spring.version>3.2.8.RELEASE</spring.version>
     <camel.version>2.12.0</camel.version>
@@ -40,9 +40,11 @@
     <maven-compiler-plugin.version>2.5.1</maven-compiler-plugin.version>
     <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
     <maven-bundle-plugin.version>2.3.7</maven-bundle-plugin.version>
+    <archetype-packaging.version>2.2</archetype-packaging.version>
+    <maven-archetype-plugin.version>2.2</maven-archetype-plugin.version>
   </properties>
 
-  <url>${site.url}/cmu-sphinx4soc/sphinx4soc-parent</url>
+  <url>${site.url}/sphinx4soc-parent</url>
 
   <distributionManagement>
     <site>
@@ -51,19 +53,6 @@
       <url>${site.deploy.url}sphinx4soc-parent</url>
     </site>
   </distributionManagement>
-
-  <repositories>
-    <repository>
-      <id>snapshots-repo</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
 
   <dependencyManagement>
     <dependencies>
@@ -197,6 +186,49 @@
           <target>${java.version}</target>
         </configuration>
       </plugin>
+      <!--
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <version>${maven-bundle-plugin-version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <excludeDependencies>${camel.osgi.exclude.dependencies}</excludeDependencies>
+          <instructions>
+            <Bundle-Name>${project.artifactId}</Bundle-Name>
+            <Bundle-SymbolicName>${camel.osgi.symbolic.name}</Bundle-SymbolicName>
+            <Bundle-Activator>${camel.osgi.activator}</Bundle-Activator>
+            <Export-Package>${camel.osgi.export}</Export-Package>
+            <Import-Package>${camel.osgi.import}</Import-Package>
+            <DynamicImport-Package>${camel.osgi.dynamic}</DynamicImport-Package>
+            <Private-Package>${camel.osgi.private.pkg}</Private-Package>
+            <Import-Service>${camel.osgi.import.service}</Import-Service>
+            <Export-Service>${camel.osgi.export.service}</Export-Service>
+            <Require-Capability>${camel.osgi.require.capability}</Require-Capability>
+            <Provide-Capability>${camel.osgi.provide.capability}</Provide-Capability>
+            <Implementation-Title>Apache Camel</Implementation-Title>
+            <Implementation-Version>${project.version}</Implementation-Version>
+            <Karaf-Info>Camel;${project.artifactId}=${project.version}</Karaf-Info>
+            <_versionpolicy>${camel.osgi.import.default.version}</_versionpolicy>
+            <_failok>${camel.osgi.failok}</_failok>
+          </instructions>
+        </configuration>
+        <executions>
+          <execution>
+            <id>versions</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>cleanVersions</goal>
+            </goals>
+            <configuration>
+              <versions>
+                <camel.osgi.version.clean>${project.version}</camel.osgi.version.clean>
+              </versions>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      -->
     </plugins>
 
     <pluginManagement>

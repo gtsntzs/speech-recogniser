@@ -10,7 +10,7 @@
 
   <bannerLeft>
     <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
-    <name><![CDATA[<span class="color-highlight">Sphinx4soc Microphone</span> Component]]></name>
+    <name><![CDATA[<span class="color-highlight">Microphone</span> Component]]></name>
   </bannerLeft>
 
   <custom>
@@ -32,7 +32,7 @@
 
   <body>
     <breadcrumbs>
-      <item name="Sphinx4soc :: Microphone :: Component" href="/" />
+      <item name="Microphone :: Component" href="/" />
     </breadcrumbs>
   </body>
 </project>

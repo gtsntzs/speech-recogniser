@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/DECORATION/1.3.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
+
+  <!-- Google Analytics not inherited for some reason
+  <googleAnalyticsAccountId>UA-54501187-1</googleAnalyticsAccountId>
+  -->
+
+  <bannerLeft>
+    <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
+    <name><![CDATA[<span class="color-highlight">Component</span> Archetype]]></name>
+  </bannerLeft>
+
+  <custom>
+    <reflowSkin>
+      <pages>
+        <index project="component-archetype" combine.self="override">
+          <!-- no ToC on the index page -->
+        </index>
+      </pages>
+    </reflowSkin>
+  </custom>
+
+  <body>
+    <breadcrumbs>
+      <item name="Component :: Archetype" href="/" />
+    </breadcrumbs>
+  </body>
+</project>

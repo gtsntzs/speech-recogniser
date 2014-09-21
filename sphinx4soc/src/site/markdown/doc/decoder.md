@@ -1,19 +1,8 @@
-## Maven Documentation
-
-Mainly 
-
-``` XML
-<skin>
-  <groupId>lt.velykis.maven.skins</groupId>
-  <artifactId>reflow-maven-skin</artifactId>
-  <version>1.1.1</version>
-</skin>
-```
-
+## Decoder
 
 ## Input Documentation
 
-Streaming audio into the recognizer.  
+Streaming audio into the recognizer.
 
 ## Front-end Documentation
 

@@ -26,7 +26,7 @@
       <!-- Make this to 'false' for local development, i.e. file:// URLs -->
       <protocolRelativeURLs>false</protocolRelativeURLs>
       <smoothScroll>true</smoothScroll>
-      <theme>default</theme>
+      <theme>bootswatch-cyborg</theme>
       <highlightJs>true</highlightJs>
       <highlightJsTheme>github</highlightJsTheme>
       <!-- <absoluteResourceURL>http://gtsntzs.github.io/reflow-maven-skin/</absoluteResourceURL> -->
@@ -62,7 +62,7 @@
       </bottomDescription>
 
       <pages>
-        <index project="reflow-parent">
+        <index project="sphinx4soc">
           <titleTemplate>sphinx4soc</titleTemplate>
           <breadcrumbs>false</breadcrumbs>
           <toc>false</toc>
@@ -70,14 +70,44 @@
           <sections>
             <columns>2</columns>
             <body />
+            <sidebar />
           </sections>
         </index>
 
+        <tools>
+          <breadcrumbs>false</breadcrumbs>
+          <titleTemplate>Tools</titleTemplate>
+          <sections>
+            <columns>2</columns>
+            <body/>
+          </sections>
+        </tools>
+
+        <info>
+          <breadcrumbs>false</breadcrumbs>
+          <titleTemplate>Info</titleTemplate>
+          <sections>
+            <columns>2</columns>
+            <body/>
+            <sidebar />
+          </sections>
+        </info>
+
+        <info>
+          <breadcrumbs>false</breadcrumbs>
+          <titleTemplate>Info</titleTemplate>
+          <sections>
+            <columns>2</columns>
+            <body/>
+          </sections>
+        </info>
+
         <contribute>
+          <titleTemplate>Contribute</titleTemplate>
           <breadcrumbs>false</breadcrumbs>
         </contribute>
-
         <!-- Disable source highlighting for Maven reports -->
+
         <source-repository>
           <highlightJs>false</highlightJs>
         </source-repository>
@@ -91,8 +121,8 @@
           <highlightJs>false</highlightJs>
           <toc>false</toc>
         </license>
-
         <!-- Disable ToC for some Maven reports -->
+
         <project-info>
           <toc>false</toc>
         </project-info>
@@ -100,10 +130,20 @@
         <github-report>
           <toc>false</toc>
         </github-report>
+
+        <advanced>
+          <sections>
+            <columns>2</columns>
+            <body/>
+            <sidebar/>
+          </sections>
+        </advanced>
+
         <dependencies>
           <tocTopMax>4</tocTopMax>
         </dependencies>
       </pages>
+
     </reflowSkin>
   </custom>
 
@@ -114,30 +154,28 @@
     </breadcrumbs>
 
     <menu name="Documentation" inherit="bottom">
-      <item name="Usage" href="doc/" />
       <item name="Input" href="doc/input.html" />
       <item name="FrontEnd" href="doc/frontend.html" />
       <item name="Decoder" href="doc/decoder.html" />
-      <item name="Evaluator" href="doc/evaluator.html" />
-      <item name="Monitor" href="doc/monitor.html" />
+      <item name="Monitoring" href="doc/evaluator.html" />
+      <item name="Configuration" href="doc/" />
+      <item name="Orchestration" href="doc/" />
     </menu>
 
     <menu name="Modules" inherit="bottom">
-      <item name="Modules" href="modules.html" />
-      <item name="Maven Structure" href="sphinx4soc/maven.html" />
-      <item name="Sphinx4SOC Core Library" href="sphinx4soc/sphinx4soc-core.html" />
-      <item name="Sphinx4SOC Camel" href="sphinx4soc/sphinx4soc-camel.html" />
-      <item name="Sphinx4SOC Components" href="sphinx4soc/components.html" />
-      <item name="Sphinx4SOC Delta Component" href="sphinx4soc/delta-component.html" />
-      <item name="Sphinx4SOC Windower Component" href="sphinx4soc/windower-component.html" />
-      <item name="Sphinx4 Models" href="sphinx4soc/models.html" />
-      <item name="App MFCC feature extractor" href="sphinx4soc/app/mfcc-feature-extractor.html" />
-      <item name="App Speech Recogniser" href="sphinx4soc/app/file-speech-recogniser.html" />
+      <item name="CMU Sphinx4soc" href="cmu-sphinx4soc/" />
+      <item name="Sphinx4soc Library" href="sphinx4soc-lib/" />
+      <item name="Components" href="components/" />
+      <item name="Delta Component" href="components/delta-component/" />
+      <item name="Windower Component" href="components/windower-component/" />
+      <item name="Microphone Component" href="components/microphone-component/" />
+      <item name="Sphinx4 Models" href="sphinx4-models/" />
+      <item name="Sphinxsoc parent" href="sphinx4soc-parent/" />
     </menu>
 
     <links>
-      <item name="Download" href="https://github.com/gtsntzs/sr-soa/archive/master.zip" />
-      <item name="GitHub project" href="https://github.com/gtsntzs/sr-soa" />
+      <item name="Download" href="https://github.com/gtsntzs/speech-recogniser/archive/master.zip" />
+      <item name="GitHub project" href="https://github.com/gtsntzs/speech-recogniser" />
     </links>
 
     <menu name="Contribute" inherit="bottom">

@@ -10,7 +10,7 @@
 
   <bannerLeft>
     <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
-    <name><![CDATA[<span class="color-highlight">Sphinx4soc Deltafeature</span> Component]]></name>
+    <name><![CDATA[<span class="color-highlight">Delta Features</span> Component]]></name>
   </bannerLeft>
 
   <custom>
@@ -32,7 +32,7 @@
 
   <body>
     <breadcrumbs>
-      <item name="Sphinx4soc Deltafeature:: Component" href="/" />
+      <item name="Deltafeature:: Component" href="/" />
     </breadcrumbs>
   </body>
 </project>
