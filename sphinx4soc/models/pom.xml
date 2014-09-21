@@ -3,13 +3,13 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.31</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4-models</artifactId>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.31</version>
   <packaging>pom</packaging>
 
   <name>Sphinx4 Models</name>
@@ -19,7 +19,7 @@
   </description>
 
   <modules>
-    <module>default</module>
+    <module>model-default</module>
   </modules>
 
   <url>${site.url}/sphinx4-models</url>

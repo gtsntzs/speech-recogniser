@@ -3,13 +3,13 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.31</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4soc-lib</artifactId>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.31</version>
   <packaging>bundle</packaging>
 
   <name>Sphinx4soc Library</name>

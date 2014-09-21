@@ -4,13 +4,13 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.31</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>archetypes</artifactId>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.31</version>
   <packaging>pom</packaging>
 
   <name>Archetypes :: Aggregator</name>
@@ -30,8 +30,8 @@
   </distributionManagement>
 
   <modules>
-	<module>component-archetype</module>
-    <module>models-archetype</module>
+	<module>archetype-component</module>
+    <module>archetype-model</module>
   </modules>
 
   <build>

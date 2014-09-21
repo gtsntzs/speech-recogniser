@@ -5,12 +5,12 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc</artifactId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.31</version>
   </parent>
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4soc-parent</artifactId>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.31</version>
   <packaging>pom</packaging>
 
   <name>Sphinx4soc :: Parent</name>

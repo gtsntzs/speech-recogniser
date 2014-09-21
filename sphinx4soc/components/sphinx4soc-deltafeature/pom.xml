@@ -7,13 +7,13 @@
   <parent>
     <artifactId>components</artifactId>
     <groupId>soa.speech.recogniser</groupId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.31</version>
   </parent>
 
   <groupId>soa.speech.recogniser.components</groupId>
   <artifactId>sphinx4soc-deltafeature</artifactId>
   <packaging>bundle</packaging>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.31</version>
 
   <name>Camel Delta Features Component</name>
 
