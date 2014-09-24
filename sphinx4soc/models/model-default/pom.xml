@@ -3,12 +3,12 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>models</artifactId>
-    <version>0.32</version>
+    <version>0.33-SNAPSHOT</version>
   </parent>
 
   <groupId>soa.speech.recogniser.models</groupId>
   <artifactId>model-default</artifactId>
-  <version>0.32</version>
+  <version>0.33-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Default Models</name>

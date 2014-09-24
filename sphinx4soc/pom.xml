@@ -4,7 +4,7 @@
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4soc</artifactId>
-  <version>0.32</version>
+  <version>0.33-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <name>Sphinx4soc :: Aggregator</name>

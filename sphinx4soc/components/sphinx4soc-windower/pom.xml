@@ -6,13 +6,13 @@
 	<parent>
 		<artifactId>components</artifactId>
 		<groupId>soa.speech.recogniser</groupId>
-		<version>0.32</version>
+		<version>0.33-SNAPSHOT</version>
 	</parent>
 
 	<groupId>soa.speech.recogniser.components</groupId>
 	<artifactId>sphinx4soc-windower</artifactId>
 	<packaging>bundle</packaging>
-	<version>0.32</version>
+	<version>0.33-SNAPSHOT</version>
 
 	<name>Sphinx4soc Windower Camel Component</name>
 
