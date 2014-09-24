@@ -20,7 +20,7 @@
     Sphinx4soc Camel Microphone Component captures the input of the microphone.
   </description>
 
-  <url>${site.url}components/microphone-component</url>
+  <url>${site.url}/components/microphone-component</url>
 
   <distributionManagement>
     <site>

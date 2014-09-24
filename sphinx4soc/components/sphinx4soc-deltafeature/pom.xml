@@ -21,7 +21,7 @@
     Sphinx4soc Camel Delta Features Component calculates the delta of the mfcc features.
   </description>
 
-  <url>${site.url}components/delta-component</url>
+  <url>${site.url}/components/delta-component</url>
 
   <distributionManagement>
     <site>

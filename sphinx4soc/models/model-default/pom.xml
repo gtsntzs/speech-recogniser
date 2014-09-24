@@ -17,7 +17,7 @@
     A simple jar container of the models loaded by the recogniser.
   </description>
 
-  <url>${site.url}/sphinx4-models/model-default</url>
+  <url>${site.url}/models/model-default</url>
 
   <distributionManagement>
     <site>

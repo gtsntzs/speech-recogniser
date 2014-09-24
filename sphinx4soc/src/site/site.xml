@@ -166,10 +166,8 @@
       <item name="CMU Sphinx4soc" href="cmu-sphinx4soc/" />
       <item name="Sphinx4soc Library" href="sphinx4soc-lib/" />
       <item name="Components" href="components/" />
-      <item name="Delta Component" href="components/delta-component/" />
-      <item name="Windower Component" href="components/windower-component/" />
-      <item name="Microphone Component" href="components/microphone-component/" />
-      <item name="Sphinx4 Models" href="sphinx4-models/" />
+      <item name="Models" href="models/" />
+      <item name="Archetypes" href="archetypes/" />
       <item name="Sphinxsoc parent" href="sphinx4soc-parent/" />
     </menu>
 
@@ -180,8 +178,8 @@
 
     <menu name="Contribute" inherit="bottom">
       <item name="Contribute" href="contribute.html" />
-      <item name="Issues" href="http://github.com/andriusvelykis/reflow-maven-skin/issues/" />
-      <item name="Fork on GitHub" href="http://github.com/andriusvelykis/reflow-maven-skin/" />
+<!--       <item name="Issues" href="http://github.com/andriusvelykis/reflow-maven-skin/issues/" /> -->
+<!--       <item name="Fork on GitHub" href="http://github.com/andriusvelykis/reflow-maven-skin/" /> -->
     </menu>
 
     <menu name="Maven documentation" ref="reports" inherit="bottom" />

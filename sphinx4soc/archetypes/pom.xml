@@ -16,7 +16,7 @@
   <name>Archetypes :: Aggregator</name>
 
   <description>
-		The parent module for the archetype projects.
+    The parent module for the archetype projects.
   </description>
 
   <url>${site.url}/archetypes</url>
@@ -29,7 +29,7 @@
   </distributionManagement>
 
   <modules>
-	<module>archetype-component</module>
+    <module>archetype-component</module>
     <module>archetype-model</module>
   </modules>
 
