@@ -4,13 +4,13 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>0.31</version>
+    <version>0.32</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>edu.cmu.sphinx</groupId>
   <artifactId>cmu-sphinx4soc</artifactId>
-  <version>0.31</version>
+  <version>0.32</version>
   <packaging>bundle</packaging>
   <name>CMU Sphinx4soc Library</name>
 

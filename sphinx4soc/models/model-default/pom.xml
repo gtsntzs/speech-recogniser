@@ -2,13 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>soa.speech.recogniser</groupId>
-    <artifactId>sphinx4-models</artifactId>
-    <version>0.31</version>
+    <artifactId>models</artifactId>
+    <version>0.32</version>
   </parent>
 
   <groupId>soa.speech.recogniser.models</groupId>
   <artifactId>model-default</artifactId>
-  <version>0.31</version>
+  <version>0.32</version>
   <packaging>jar</packaging>
 
   <name>Default Models</name>
