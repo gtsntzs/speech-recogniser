@@ -26,12 +26,6 @@ public class StreamRawAudioDynamicRouter {
 		this.sequence = sequence;
 	}
 
-	// public StreamRawAudioDynamicRouter(String outEndpoint, String
-	// streamSourceEndpoint) {
-	// this.outEndpoind = outEndpoint;
-	// this.streamSourceEndpoint = streamSourceEndpoint;
-	// }
-
 	/**
 	 * The method invoked by Dynamic Router EIP to compute where to go next.
 	 * 
@@ -65,7 +59,6 @@ public class StreamRawAudioDynamicRouter {
 	private String next(Data data) {
 		if (data != null) {
 			String buildSequence = buildSequence();
-//			log.info(buildSequence);
 			return buildSequence;
 		} else {
 			return null;

@@ -4,7 +4,7 @@
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4soc</artifactId>
-  <version>0.33-SNAPSHOT</version>
+  <version>1.0.3</version>
   <packaging>pom</packaging>
 
   <name>Sphinx4soc :: Aggregator</name>
@@ -103,7 +103,6 @@
 
   <build>
     <plugins>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
@@ -226,8 +225,8 @@
           <connectionType>connection</connectionType>
         </configuration>
       </plugin>
-
     </plugins>
+
     <!-- -->
     <pluginManagement>
       <plugins>

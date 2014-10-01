@@ -3,13 +3,13 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>0.33-SNAPSHOT</version>
+    <version>1.0.3</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>soa.speech.recogniser</groupId>
   <artifactId>sphinx4soc-lib</artifactId>
-  <version>0.33-SNAPSHOT</version>
+  <version>1.0.3</version>
   <packaging>bundle</packaging>
 
   <name>Sphinx4soc Library</name>
@@ -99,6 +99,7 @@
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
+            <Export-Package>soa.speech.recogniser.*</Export-Package>
           </instructions>
         </configuration>
       </plugin>

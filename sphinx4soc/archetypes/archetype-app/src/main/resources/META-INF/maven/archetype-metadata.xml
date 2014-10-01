@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0
-                                          http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
-                                          xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-                                          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0  http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+                      xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
   <requiredProperties>
 
     <!--     archetype command extra input -->
     <requiredProperty key="name"/>
-    <requiredProperty key="scheme"/>
+    <requiredProperty key="fabric.profile"/>
 
     <!-- project properties -->
     <requiredProperty key="java-version">
@@ -15,6 +15,9 @@
     </requiredProperty>
 
     <!-- framework properties -->
+    <requiredProperty key="sphinx4soc-version">
+      <defaultValue>1.0.3</defaultValue>
+    </requiredProperty>
     <requiredProperty key="spring-version">
       <defaultValue>4.0.6.RELEASE</defaultValue>
     </requiredProperty>
@@ -24,6 +27,9 @@
     <requiredProperty key="lucene-version">
       <defaultValue>4.9.0</defaultValue>
     </requiredProperty>
+    <requiredProperty key="felix-version">
+      <defaultValue>2.0.4</defaultValue>
+    </requiredProperty>
 
     <!-- commons properties -->
     <requiredProperty key="commons-io-version">
@@ -32,7 +38,10 @@
     <requiredProperty key="commons-lang-version">
       <defaultValue>3.3.2</defaultValue>
     </requiredProperty>
-
+    <requiredProperty key="joda-time-version">
+      <defaultValue>2.4</defaultValue>
+    </requiredProperty>
+    
     <!-- web properties -->
     <requiredProperty key="jersey-version">
       <defaultValue>1.18.1</defaultValue>
@@ -78,16 +87,15 @@
     <requiredProperty key="maven-resources-plugin-version">
       <defaultValue>2.6</defaultValue>
     </requiredProperty>
-
+    <requiredProperty key="fabric8-maven-version">
+      <defaultValue>1.1.0.CR5</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="maven-bundle-plugin-version">
+      <defaultValue>2.3.7</defaultValue>
+    </requiredProperty>
   </requiredProperties>
 
   <fileSets>
-    <fileSet filtered="true" packaged="true" encoding="UTF-8">
-      <directory>src/main/java</directory>
-      <includes>
-        <include>**/*.java</include>
-      </includes>
-    </fileSet>
 
     <fileSet filtered="true" encoding="UTF-8">
       <directory>src/main/resources</directory>
@@ -99,7 +107,7 @@
     <fileSet filtered="true" packaged="true" encoding="UTF-8">
       <directory>src/test/java</directory>
       <includes>
-        <include>**/*.java</include>
+        <include>**/*</include>
       </includes>
     </fileSet>
 
@@ -107,20 +115,6 @@
       <directory>src/test/resources</directory>
       <includes>
         <include>**/*</include>
-      </includes>
-    </fileSet>
-
-    <fileSet encoding="UTF-8">
-      <directory>src/data</directory>
-      <includes>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-
-    <fileSet encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>ReadMe.txt</include>
       </includes>
     </fileSet>
 

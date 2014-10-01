@@ -4,13 +4,13 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>0.33-SNAPSHOT</version>
+    <version>1.0.3</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>edu.cmu.sphinx</groupId>
   <artifactId>cmu-sphinx4soc</artifactId>
-  <version>0.33-SNAPSHOT</version>
+  <version>1.0.3</version>
   <packaging>bundle</packaging>
   <name>CMU Sphinx4soc Library</name>
 
@@ -74,6 +74,7 @@
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
+            <Export-Package>edu.cmu.sphinx.*</Export-Package>
           </instructions>
         </configuration>
       </plugin>
