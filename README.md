@@ -1,5 +1,5 @@
 speech-recogniser
 =================
 
-Documentation is available http://gtsntzs.github.io/speech-recogniser/
+Documentation is available at http://gtsntzs.github.io/speech-recogniser/
  
