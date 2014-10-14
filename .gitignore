@@ -1,6 +1,7 @@
 target/
 .project
 .classpath
+.attach_pid*
 .settings/
 *.swo
 *.swp
