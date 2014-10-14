@@ -1,92 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<artifactId>components</artifactId>
-		<groupId>soa.speech.recogniser</groupId>
-		<version>1.0.3</version>
-	</parent>
+    <parent>
+        <artifactId>components</artifactId>
+        <groupId>soa.speech.recogniser</groupId>
+        <version>1.0.4</version>
+    </parent>
 
-	<groupId>soa.speech.recogniser.components</groupId>
-	<artifactId>sphinx4soc-windower</artifactId>
-	<packaging>bundle</packaging>
-	<version>1.0.3</version>
+    <groupId>soa.speech.recogniser.components</groupId>
+    <artifactId>sphinx4soc-windower</artifactId>
+    <packaging>bundle</packaging>
+    <version>1.0.4</version>
 
-	<name>Sphinx4soc Windower Camel Component</name>
+    <name>Sphinx4soc Windower Camel Component</name>
 
-  <description>
+    <description>
     Sphinx4soc Windower Camel Component applies the window function over the audio signal.
   </description>
 
-  <url>${site.url}/components/windower-component</url>
+    <url>${site.url}/components/windower-component</url>
 
-  <distributionManagement>
-    <site>
-      <id>${site.deploy.id}</id>
-      <!-- Note that GitHub does not like having leading slash, so make it explicit -->
-      <url>${site.deploy.url}components/windower-component</url>
-    </site>
-  </distributionManagement>
+    <distributionManagement>
+        <site>
+            <id>${site.deploy.id}</id>
+            <!-- Note that GitHub does not like having leading slash, so make it explicit -->
+            <url>${site.deploy.url}components/windower-component</url>
+        </site>
+    </distributionManagement>
 
-  <properties>
-    <camel.osgi.export.service>org.apache.camel.spi.ComponentResolver;component=window</camel.osgi.export.service>
-  </properties>
+    <properties>
+        <camel.osgi.export.service>org.apache.camel.spi.ComponentResolver;component=window</camel.osgi.export.service>
+    </properties>
 
-	<dependencies>
-    <!-- sphinx4soc -->
-    <dependency>
-		    <groupId>edu.cmu.sphinx</groupId>
-		    <artifactId>cmu-sphinx4soc</artifactId>
-		</dependency>
+    <dependencies>
+        <!-- sphinx4soc -->
+        <dependency>
+            <groupId>edu.cmu.sphinx</groupId>
+            <artifactId>cmu-sphinx4soc</artifactId>
+        </dependency>
 
-    <!-- camel -->
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-core</artifactId>
-		</dependency>
+        <!-- camel -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+        </dependency>
 
-		<!-- logging -->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<scope>test</scope>
-		</dependency>
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <scope>test</scope>
+        </dependency>
 
-		<!-- testing -->
-		<dependency>
-			<groupId>org.apache.camel</groupId>
-			<artifactId>camel-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+        <!-- testing -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
-	<build>
-		<plugins>
-			<!-- to generate the MANIFEST-FILE of the bundle -->
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-            <Bundle-Version>${project.version}</Bundle-Version>
-						<Export-Service>${camel.osgi.export.service}</Export-Service>
-					</instructions>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+    <build>
+        <plugins>
+            <!-- to generate the MANIFEST-FILE of the bundle -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+                        <Bundle-Version>${project.version}</Bundle-Version>
+                        <Export-Service>${camel.osgi.export.service}</Export-Service>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -5,12 +5,12 @@
     <parent>
         <groupId>soa.speech.recogniser</groupId>
         <artifactId>sphinx4soc</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
 
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <packaging>pom</packaging>
 
     <name>Sphinx4soc :: Parent</name>
@@ -62,13 +62,13 @@
                 <artifactId>cmu-sphinx4soc</artifactId>
                 <version>${sphinx4soc.version}</version>
             </dependency>
-        
+
             <dependency>
                 <groupId>soa.speech.recogniser</groupId>
                 <artifactId>sphinx4soc-lib</artifactId>
                 <version>${sphinx4soc.version}</version>
             </dependency>
-        
+
             <dependency>
                 <groupId>soa.speech.recogniser.models</groupId>
                 <artifactId>model-default</artifactId>
@@ -80,7 +80,7 @@
                 <artifactId>sphinx4soc-deltafeature</artifactId>
                 <version>${sphinx4soc.version}</version>
             </dependency>
-        
+
             <dependency>
                 <groupId>soa.speech.recogniser.components</groupId>
                 <artifactId>sphinx4soc-windower</artifactId>
@@ -190,21 +190,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            <!-- <plugin> <groupId>org.apache.felix</groupId> <artifactId>maven-bundle-plugin</artifactId> <version>${maven-bundle-plugin-version}</version> 
-                <extensions>true</extensions> <configuration> <excludeDependencies>${camel.osgi.exclude.dependencies}</excludeDependencies> <instructions> <Bundle-Name>${project.artifactId}</Bundle-Name> 
-                <Bundle-SymbolicName>${camel.osgi.symbolic.name}</Bundle-SymbolicName> <Bundle-Activator>${camel.osgi.activator}</Bundle-Activator> <Export-Package>${camel.osgi.export}</Export-Package> 
-                <Import-Package>${camel.osgi.import}</Import-Package> <DynamicImport-Package>${camel.osgi.dynamic}</DynamicImport-Package> <Private-Package>${camel.osgi.private.pkg}</Private-Package> 
-                <Import-Service>${camel.osgi.import.service}</Import-Service> <Export-Service>${camel.osgi.export.service}</Export-Service> <Require-Capability>${camel.osgi.require.capability}</Require-Capability> 
-                <Provide-Capability>${camel.osgi.provide.capability}</Provide-Capability> <Implementation-Title>Apache Camel</Implementation-Title> <Implementation-Version>${project.version}</Implementation-Version> 
-                <Karaf-Info>Camel;${project.artifactId}=${project.version}</Karaf-Info> <_versionpolicy>${camel.osgi.import.default.version}</_versionpolicy> <_failok>${camel.osgi.failok}</_failok> 
-                </instructions> </configuration> <executions> <execution> <id>versions</id> <phase>validate</phase> <goals> <goal>cleanVersions</goal> </goals> <configuration> 
-                <versions> <camel.osgi.version.clean>${project.version}</camel.osgi.version.clean> </versions> </configuration> </execution> </executions> </plugin> -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
         </plugins>
 
         <pluginManagement>

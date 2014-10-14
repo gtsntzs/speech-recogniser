@@ -18,6 +18,7 @@ mvn archetype:generate \
    -DarchetypeArtifactId=archetype-app \
    -DarchetypeVersion=1.0.3 \
    -DgroupId=soa.speech.recogniser.app \
-   -DartifactId=mfcc-feature \
-   -Dname=mfcc-feature
+   -DartifactId=decoder-default \
+   -Dname=decoder-default \
+   -Dfabric.profile=decoder-default
 
