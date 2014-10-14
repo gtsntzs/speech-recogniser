@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package soa.speech.recogniser.io.process;
+package soa.speech.io.process;
 
 import edu.cmu.sphinx.frontend.Data;
 import org.apache.camel.Body;

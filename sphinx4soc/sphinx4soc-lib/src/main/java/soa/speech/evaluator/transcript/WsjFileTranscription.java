@@ -1,4 +1,4 @@
-package soa.speech.recogniser.evaluator.transcript;
+package soa.speech.evaluator.transcript;
 
 import java.nio.charset.Charset;
 import java.nio.file.Files;

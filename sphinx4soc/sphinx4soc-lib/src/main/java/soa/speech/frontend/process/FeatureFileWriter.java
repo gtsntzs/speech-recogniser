@@ -1,4 +1,4 @@
-package soa.speech.recogniser.frontend.process;
+package soa.speech.frontend.process;
 
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;

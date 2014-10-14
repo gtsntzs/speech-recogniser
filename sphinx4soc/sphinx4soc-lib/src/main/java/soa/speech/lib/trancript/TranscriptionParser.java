@@ -1,4 +1,4 @@
-package soa.speech.recogniser.lib.trancript;
+package soa.speech.lib.trancript;
 
 import java.util.Map;
 

@@ -1,4 +1,4 @@
-package soa.speech.recogniser.evaluator.process;
+package soa.speech.evaluator.process;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;

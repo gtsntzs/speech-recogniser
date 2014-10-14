@@ -4,11 +4,11 @@
 
     <parent>
         <artifactId>components</artifactId>
-        <groupId>soa.speech.recogniser</groupId>
+        <groupId>soa.speech</groupId>
         <version>1.0.5-SNAPSHOT</version>
     </parent>
 
-    <groupId>soa.speech.recogniser.components</groupId>
+    <groupId>soa.speech.components</groupId>
     <artifactId>sphinx4soc-windower</artifactId>
     <packaging>bundle</packaging>
     <version>1.0.5-SNAPSHOT</version>

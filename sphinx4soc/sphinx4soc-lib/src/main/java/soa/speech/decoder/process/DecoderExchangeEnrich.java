@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package soa.speech.recogniser.decoder.process;
+package soa.speech.decoder.process;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;

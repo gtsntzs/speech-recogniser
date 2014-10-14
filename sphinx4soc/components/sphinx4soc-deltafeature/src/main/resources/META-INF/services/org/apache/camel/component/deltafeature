@@ -1,1 +1,1 @@
-class=soa.speech.recogniser.deltafeature.deltafeatureComponent
+class=soa.speech.deltafeature.deltafeatureComponent

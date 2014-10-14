@@ -1,4 +1,4 @@
-package soa.speech.recogniser.evaluator.monitor;
+package soa.speech.evaluator.monitor;
 
 import java.util.Collections;
 import java.util.HashMap;

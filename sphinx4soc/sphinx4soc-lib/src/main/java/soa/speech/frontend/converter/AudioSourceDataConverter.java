@@ -1,4 +1,4 @@
-package soa.speech.recogniser.frontend.converter;
+package soa.speech.frontend.converter;
 
 import javax.sound.sampled.AudioFormat;
 

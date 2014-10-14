@@ -1,4 +1,4 @@
-package soa.speech.recogniser.windower;
+package soa.speech.windower;
 
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;

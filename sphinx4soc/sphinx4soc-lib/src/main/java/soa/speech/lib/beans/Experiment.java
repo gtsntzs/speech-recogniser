@@ -1,4 +1,4 @@
-package soa.speech.recogniser.lib.beans;
+package soa.speech.lib.beans;
 
 import java.util.Arrays;
 

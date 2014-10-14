@@ -1,4 +1,4 @@
-package soa.speech.recogniser.windower;
+package soa.speech.windower;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
