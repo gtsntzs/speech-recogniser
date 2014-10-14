@@ -18,7 +18,7 @@ mvn archetype:generate \
    -DarchetypeArtifactId=archetype-app \
    -DarchetypeVersion=1.0.3 \
    -DgroupId=soa.speech.recogniser.app \
-   -DartifactId=decoder-default \
-   -Dname=decoder-default \
-   -Dfabric.profile=decoder-default
+   -DartifactId=input-mongodb \
+   -Dname=input-mongodb \
+   -Dfabric.profile=input-mongodb
 

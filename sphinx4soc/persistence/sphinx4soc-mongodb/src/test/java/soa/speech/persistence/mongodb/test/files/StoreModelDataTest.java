@@ -1,4 +1,4 @@
-package soa.speech.recogniser.mongodb.files;
+package soa.speech.persistence.mongodb.test.files;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
@@ -17,6 +17,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import soa.speech.persistence.mongodb.files.StoreModelData;
 
 import com.mongodb.gridfs.GridFSDBFile;
 

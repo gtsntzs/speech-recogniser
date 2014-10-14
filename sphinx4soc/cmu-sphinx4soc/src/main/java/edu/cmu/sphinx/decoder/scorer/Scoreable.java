@@ -73,4 +73,5 @@ public interface Scoreable extends Data {
      * @return the frame number that this Scoreable should be scored against.
      */
     public int getFrameNumber();
+    
 }

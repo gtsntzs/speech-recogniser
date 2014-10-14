@@ -1,4 +1,4 @@
-package soa.speech.recogniser.mongodb.dao;
+package soa.speech.persistence.mongodb.dao;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;

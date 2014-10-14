@@ -1,4 +1,4 @@
-package soa.speech.recogniser.mongodb.dao;
+package soa.speech.persistence.mongodb.dao;
 
 public interface SequenceDao {
 

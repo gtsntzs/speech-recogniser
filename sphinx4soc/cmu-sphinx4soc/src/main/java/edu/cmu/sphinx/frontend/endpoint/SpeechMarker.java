@@ -200,7 +200,7 @@ public class SpeechMarker extends BaseDataProcessor
                             countSpeechFrame();
                         }
                     } else if ( audio instanceof DataEndSignal ) {
-                        sendToQueue( new SpeechEndSignal( ( (Signal)audio ).getTime() ) );
+                        sendToQueue( new SpeechEndSignal( ( (Signal)audio ).getCollectTime() ) );
                         sendToQueue( audio );
                         inSpeech = false;
                     } else if ( audio instanceof DataStartSignal ) {
@@ -400,7 +400,7 @@ public class SpeechMarker extends BaseDataProcessor
                         sendToQueue( data );
                     }
                 } else if ( next instanceof DataEndSignal ) {
-                    sendToQueue( new SpeechEndSignal( ( (Signal)next ).getTime() ) );
+                    sendToQueue( new SpeechEndSignal( ( (Signal)next ).getCollectTime() ) );
                     sendToQueue( next );
                     speechEndAdded = true;
                 } else {

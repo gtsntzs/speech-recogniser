@@ -2,15 +2,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>soa.speech.recogniser</groupId>
+        <groupId>soa.speech</groupId>
         <artifactId>persistence</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.5-SNAPSHOT</version>
     </parent>
 
-    <groupId>soa.speech.recogniser.persistence</groupId>
+    <groupId>soa.speech.persistence</groupId>
     <artifactId>sphinx4soc-mongodb</artifactId>
     <packaging>bundle</packaging>
-    <version>1.0.4</version>
+    <version>1.0.5-SNAPSHOT</version>
     <name>sphinx4soc-mongodb</name>
 
     <url>${site.url}/persistence/${artifactId}</url>

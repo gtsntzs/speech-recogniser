@@ -1,4 +1,4 @@
-package soa.speech.recogniser.mongodb.dao;
+package soa.speech.persistence.mongodb.dao;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
@@ -6,7 +6,6 @@ import static org.springframework.data.mongodb.core.query.Query.query;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
@@ -14,7 +13,6 @@ import org.springframework.data.mongodb.core.query.Update;
 
 import soa.speech.recogniser.lib.beans.Experiment;
 import soa.speech.recogniser.lib.beans.Sphinx4socDataStream;
-import soa.speech.recogniser.mongodb.dao.SequenceDao;
 
 import com.mongodb.BasicDBObject;
 

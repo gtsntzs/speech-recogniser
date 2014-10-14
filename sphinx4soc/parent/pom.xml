@@ -5,18 +5,18 @@
     <parent>
         <groupId>soa.speech.recogniser</groupId>
         <artifactId>sphinx4soc</artifactId>
-        <version>1.0.4</version>
+        <version>1.0.5-SNAPSHOT</version>
     </parent>
 
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Sphinx4soc :: Parent</name>
     <description>
-    Sphinx4soc Parent Project.
-  </description>
+        Sphinx4soc Parent Project.
+    </description>
 
     <properties>
         <!-- testing properties -->
@@ -26,16 +26,20 @@
         <sphinx4soc.version>${project.version}</sphinx4soc.version>
         <!-- testing properties -->
         <spring.version>3.2.8.RELEASE</spring.version>
+        <spring-data-mongodb.version>1.5.0.RELEASE</spring-data-mongodb.version>
         <camel.version>2.12.0</camel.version>
         <felix.version>2.0.4</felix.version>
         <commons-io.version>2.4</commons-io.version>
         <joda-time.version>2.4</joda-time.version>
+        <tika.version>1.6</tika.version>
+        <jackson-mapper-asl.version>1.9.13</jackson-mapper-asl.version>
         <!-- logging properties -->
         <log4j.version>1.2.17</log4j.version>
         <slf4j.version>1.7.6</slf4j.version>
         <!-- testing properties -->
         <mockito.version>1.9.5</mockito.version>
         <testng.version>6.8.8</testng.version>
+        <junit.version>4.11</junit.version>
         <!-- plugin properties -->
         <maven-compiler-plugin.version>2.5.1</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.6</maven-resources-plugin.version>
@@ -104,6 +108,12 @@
                 <artifactId>spring-core</artifactId>
                 <version>${spring.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>${spring-data-mongodb.version}</version>
+            </dependency>
+
 
             <!-- camel -->
             <dependency>
@@ -136,11 +146,25 @@
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
                 <version>${joda-time.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-core</artifactId>
+                <version>${tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.jackson</groupId>
+                <artifactId>jackson-mapper-asl</artifactId>
+                <version>${jackson-mapper-asl.version}</version>
+            </dependency>
+
 
             <!-- logging -->
             <dependency>
@@ -160,6 +184,17 @@
             </dependency>
 
             <!-- testing -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>

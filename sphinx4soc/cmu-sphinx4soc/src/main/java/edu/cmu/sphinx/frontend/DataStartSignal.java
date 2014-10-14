@@ -86,7 +86,7 @@ public class DataStartSignal extends Signal {
      */
     @Override
     public String toString() {
-        return "DataStartSignal: creation time: " + getTime();
+        return "DataStartSignal: creation time: " + getCollectTime();
     }
 
 

@@ -51,7 +51,7 @@ public class Signal implements Data {
      *
      * @return the time this Signal was created
      */
-    public long getTime() {
+    public long getCollectTime() {
         return time;
     }
 

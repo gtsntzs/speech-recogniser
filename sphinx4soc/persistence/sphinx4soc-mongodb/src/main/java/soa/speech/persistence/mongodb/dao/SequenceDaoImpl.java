@@ -1,14 +1,14 @@
-package soa.speech.recogniser.mongodb.dao;
+package soa.speech.persistence.mongodb.dao;
 
 import org.springframework.data.mongodb.core.FindAndModifyOptions;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Repository;
 
-import soa.speech.recogniser.mongodb.beans.SequenceId;
+import soa.speech.persistence.mongodb.beans.SequenceId;
+
 
 @Repository
 public class SequenceDaoImpl implements SequenceDao {

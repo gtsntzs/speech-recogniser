@@ -224,7 +224,7 @@ public class SpeedTracker implements ResultListener, Resetable, StateListener, S
     {
         if ( signal instanceof DataStartSignal ) {
             startTime = getTime();
-            long responseTime = ( System.currentTimeMillis()-signal.getTime() );
+            long responseTime = ( System.currentTimeMillis()-signal.getCollectTime() );
             totalResponseTime += responseTime;
             if ( responseTime>maxResponseTime ) {
                 maxResponseTime = responseTime;

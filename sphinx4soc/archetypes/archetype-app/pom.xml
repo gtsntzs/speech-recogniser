@@ -5,12 +5,12 @@
   <parent>
     <groupId>soa.speech.recogniser</groupId>
     <artifactId>archetypes</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5-SNAPSHOT</version>
   </parent>
 
   <groupId>soa.speech.recogniser.archetypes</groupId>
   <artifactId>archetype-app</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
   <name>App :: Archetype</name>

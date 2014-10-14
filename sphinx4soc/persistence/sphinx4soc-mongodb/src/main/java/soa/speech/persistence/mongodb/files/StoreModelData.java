@@ -1,4 +1,4 @@
-package soa.speech.recogniser.mongodb.files;
+package soa.speech.persistence.mongodb.files;
 
 import java.io.File;
 import java.io.IOException;

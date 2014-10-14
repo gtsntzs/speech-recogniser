@@ -125,6 +125,11 @@ public class Token implements Scoreable
     {
         return frameNumber;
     }
+    
+    public long getCollectTime(){
+        
+        return new Integer(frameNumber).longValue();
+    }
 
     /** Sets the feature for this Token.
      * @param data*/

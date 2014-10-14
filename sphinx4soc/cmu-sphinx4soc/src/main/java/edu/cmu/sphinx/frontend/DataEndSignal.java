@@ -64,7 +64,7 @@ public class DataEndSignal extends Signal {
      */
     @Override
     public String toString() {
-        return ("DataEndSignal: creation time: " + getTime() + ", duration: " +
+        return ("DataEndSignal: creation time: " + getCollectTime() + ", duration: " +
                 getDuration() + "ms");
     }
 }

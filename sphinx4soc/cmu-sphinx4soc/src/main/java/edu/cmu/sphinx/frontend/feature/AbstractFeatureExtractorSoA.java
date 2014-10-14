@@ -94,13 +94,13 @@ public abstract class AbstractFeatureExtractorSoA extends BaseDataProcessor
                 addCepstrum( (DoubleData)input );
                 computeFeatures( 1 );
             } else if ( input instanceof DataStartSignal ) {
-                loger.info( "DataStartSignal time: "+( (DataStartSignal)input ).getTime() );
+                loger.info( "DataStartSignal time: "+( (DataStartSignal)input ).getCollectTime() );
                 pendingSignal = null;
                 outputQueue.add( input );
                 flagStart = false;
 
             } else if ( input instanceof DataEndSignal||input instanceof SpeechEndSignal ) {
-                loger.info( "DataEndSignal time: "+( (DataEndSignal)input ).getTime() );
+                loger.info( "DataEndSignal time: "+( (DataEndSignal)input ).getCollectTime() );
                 // when the DataEndSignal is right at the boundary
                 int n = replicateLastCepstrum();
                 computeFeatures( n );

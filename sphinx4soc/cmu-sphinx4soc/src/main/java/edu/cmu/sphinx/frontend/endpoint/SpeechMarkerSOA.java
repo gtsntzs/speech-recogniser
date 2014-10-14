@@ -187,7 +187,7 @@ public class SpeechMarkerSOA
                     countSpeechFrame();
                 }
             } else if ( audio instanceof DataEndSignal ) {
-                sendToQueue( new SpeechEndSignal( ( (Signal)audio ).getTime() ) );
+                sendToQueue( new SpeechEndSignal( ( (Signal)audio ).getCollectTime() ) );
                 sendToQueue( audio );
                 inSpeech = false;
             } else if ( audio instanceof DataStartSignal ) {
@@ -392,7 +392,7 @@ public class SpeechMarkerSOA
                     sendToQueue( data );
                 }
             } else if ( audio instanceof DataEndSignal ) {
-                sendToQueue( new SpeechEndSignal( ( (Signal)audio ).getTime() ) );
+                sendToQueue( new SpeechEndSignal( ( (Signal)audio ).getCollectTime() ) );
                 sendToQueue( audio );
                 speechEndAdded = true;
             } else {
