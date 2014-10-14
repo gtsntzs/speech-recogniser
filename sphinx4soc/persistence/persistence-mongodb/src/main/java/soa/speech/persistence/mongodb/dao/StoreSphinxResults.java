@@ -11,8 +11,8 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
-import soa.speech.recogniser.lib.beans.Experiment;
-import soa.speech.recogniser.lib.beans.Sphinx4socDataStream;
+import soa.speech.lib.beans.Experiment;
+import soa.speech.lib.beans.Sphinx4socDataStream;
 
 import com.mongodb.BasicDBObject;
 

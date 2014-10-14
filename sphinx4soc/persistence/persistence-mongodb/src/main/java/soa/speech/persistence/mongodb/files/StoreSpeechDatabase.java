@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 
-import soa.speech.recogniser.lib.trancript.TranscriptionParser;
+import soa.speech.lib.trancript.TranscriptionParser;
 
 import com.mongodb.gridfs.GridFSDBFile;
 

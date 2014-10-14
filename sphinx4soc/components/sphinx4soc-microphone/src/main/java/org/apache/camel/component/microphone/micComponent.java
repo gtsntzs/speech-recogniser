@@ -2,8 +2,6 @@ package org.apache.camel.component.microphone;
 
 import java.util.Map;
 
-import javax.sound.sampled.AudioFormat;
-
 import org.apache.camel.Endpoint;
 import org.apache.camel.impl.UriEndpointComponent;
 

@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Query;
 
-import soa.speech.recogniser.lib.beans.Experiment;
+import soa.speech.lib.beans.Experiment;
 
 public class ExperimentDao {
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mongo="http://www.springframework.org/schema/data/mongo" xmlns:util="http://www.springframework.org/schema/util"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+                           http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <context:property-placeholder location="classpath:/META-INF/mongodb.properties" />
+
+    <mongo:mongo id="mongo" host="${mongo.host}" port="${mongo.port}">
+        <mongo:options connections-per-host="8" />
+    </mongo:mongo>
+
+    <!-- MongoDB GridFS Speech Files -->
+    <mongo:db-factory id="mongoDbFactoryFS" dbname="${speech.fs.database.name}" mongo-ref="mongo" />
+    <mongo:mapping-converter id="converter" db-factory-ref="mongoDbFactoryFS" />
+    <bean id="gridFsTemplate" class="org.springframework.data.mongodb.gridfs.GridFsTemplate">
+        <constructor-arg ref="mongoDbFactoryFS" />
+        <constructor-arg ref="converter" />
+    </bean>
+
+    <bean id="storeSpeechDatabase" class="soa.speech.recogniser.mongodb.files.StoreSpeechDatabase">
+        <property name="gridFsTemplate" ref="gridFsTemplate" />
+        <property name="parserClass" value="${store.speechfiles.transcription.parserClass}" />
+        <property name="transcriptionFile" value="${store.speechfiles.transcription.file}" />
+        <property name="speechFilesDirectory" value="${store.speechfiles.directory}" />
+        <property name="speechFileExtensions" value="${store.speechfiles.extensions}" />
+    </bean>
+
+    <util:map id="modelMetadata">
+        <entry key="databaseName" value="${speech.fs.database.name}" />
+        <entry key="modelName" value="WSJ_clean_13dCep_16k_40mel_130Hz_6800Hz" />
+        <entry key="featureType" value="1s_c_d_dd" />
+        <entry key="statesperhmm" value="3" />
+        <entry key="skipstate" value="false" />
+        <entry key="gaussiansPerState" value="8" />
+        <entry key="nTiedStates" value="4000" />
+        <entry key="agc" value="none" />
+        <entry key="cmn" value="current" />
+        <entry key="varnorm" value="false" />
+    </util:map>
+
+    <bean id="storeModelData" class="soa.speech.recogniser.mongodb.files.StoreModelData">
+        <property name="gridFsTemplate" ref="gridFsTemplate" />
+        <property name="modeldefPath" value="${store.model.main.directory}${store.model.mdef.path}" />
+        <property name="dictionaryPath" value="${store.model.main.directory}${store.model.dict.path}" />
+        <property name="fillerdictionaryPath" value="${store.model.main.directory}${store.model.dict.path}" />
+        <property name="modelParameterPaths" value="${store.model.parameter.paths}" />
+        <property name="metadata" ref="modelMetadata" />
+    </bean>
+
+</beans>
