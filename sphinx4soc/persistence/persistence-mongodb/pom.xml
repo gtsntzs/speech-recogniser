@@ -8,10 +8,10 @@
     </parent>
 
     <groupId>soa.speech.persistence</groupId>
-    <artifactId>sphinx4soc-mongodb</artifactId>
+    <artifactId>persistence-mongodb</artifactId>
     <packaging>bundle</packaging>
     <version>1.0.5-SNAPSHOT</version>
-    <name>sphinx4soc-mongodb</name>
+    <name>persistence-mongodb</name>
 
     <url>${site.url}/persistence/${artifactId}</url>
 

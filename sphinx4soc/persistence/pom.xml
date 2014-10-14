@@ -30,6 +30,6 @@
   </distributionManagement>
 
   <modules>
-    <module>sphinx4soc-mongodb</module>
+    <module>persistence-mongodb</module>
   </modules>
 </project>
