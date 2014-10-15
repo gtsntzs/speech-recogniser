@@ -38,7 +38,7 @@ public class StreamRawAudioDynamicRouter {
 	 */
 	public String route(Exchange ex) throws Exception {
 		Data data = ex.getIn().getBody(Data.class);
-
+		log.info("Recieved data of type " + data.getClass().getCanonicalName()); 
 		return next(data);
 	}
 

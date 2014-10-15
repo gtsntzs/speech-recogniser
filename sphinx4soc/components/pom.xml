@@ -4,13 +4,13 @@
   <parent>
     <groupId>soa.speech</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>soa.speech</groupId>
   <artifactId>components</artifactId>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>1.0.5</version>
   <packaging>pom</packaging>
 
   <name>Camel Components</name>

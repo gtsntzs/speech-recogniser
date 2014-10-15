@@ -18,7 +18,8 @@ public class Experiment {
     private String frontEndConfiguration;
     private String decoderConfiguration;
     // TODO use a rule based predicate defined by the database
-    private int corpus;
+    private String corpus = Corpus.ALL.name();
+    private int numOfSamples;
     
     public String getName() {
         return name;
@@ -80,19 +81,25 @@ public class Experiment {
     public void setDecoderConfiguration(String decoderConfiguration) {
         this.decoderConfiguration = decoderConfiguration;
     }
-    public int getCorpus() {
+    public int getNumOfSamples() {
+        return numOfSamples;
+    }
+    public void setNumOfSamples(int corpus) {
+        this.numOfSamples = corpus;
+    }
+    public String getCorpus() {
         return corpus;
     }
-    public void setCorpus(int corpus) {
+    public void setCorpus(String corpus) {
         this.corpus = corpus;
     }
     @Override
     public String toString() {
-        return "{\"experimentName\":\"" + name + "\",\"version\":\"" + version + "\",\"speechDatabase\":\"" + speechDatabase
-                + "\",\"modelsName\":\"" + modelsName + "\",\"dictDataName\":\"" + dictDataName + "\",\"dictFillerName\":\"" + dictFillerName
-                + "\",\"mdefFileName\":\"" + mdefFileName + "\",\"modelDataNames\":\"" + Arrays.toString(modelDataNames)
-                + "\",\"frontEndConfiguration\":\"" + frontEndConfiguration + "\",\"decoderConfiguration\":\"" + decoderConfiguration
-                + "\",\"corpus\":\"" + corpus + "\"}";
+        return "{\"name\":\"" + name + "\",\"version\":\"" + version + "\",\"speechDatabase\":\"" + speechDatabase + "\",\"modelsName\":\""
+                + modelsName + "\",\"dictDataName\":\"" + dictDataName + "\",\"dictFillerName\":\"" + dictFillerName + "\",\"mdefFileName\":\""
+                + mdefFileName + "\",\"modelDataNames\":\"" + Arrays.toString(modelDataNames) + "\",\"frontEndConfiguration\":\""
+                + frontEndConfiguration + "\",\"decoderConfiguration\":\"" + decoderConfiguration + "\",\"corpus\":\"" + corpus
+                + "\",\"numOfSamples\":\"" + numOfSamples + "\"}";
     }
     
 }

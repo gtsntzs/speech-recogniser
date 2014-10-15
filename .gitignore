@@ -3,6 +3,7 @@ target/
 .classpath
 .attach_pid*
 .settings/
+test-output/ 
 *.swo
 *.swp
 *.versionsBackup

@@ -8,7 +8,7 @@
 
   <bannerLeft>
     <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
-    <name><![CDATA[<span class="color-highlight">Sphinx4soc</span> Components]]></name>
+    <name><![CDATA[<span class="color-highlight">Sphinx4soc</span> Persistence]]></name>
   </bannerLeft>
 
   <custom>
@@ -20,7 +20,7 @@
       </brand>
 
       <pages>
-        <index project="sphinx4soc-components" combine.self="override">
+        <index project="persistence" combine.self="override">
           <!-- no ToC on the index page -->
           <toc>false</toc>
         </index>
@@ -30,7 +30,7 @@
 
   <body>
     <breadcrumbs>
-      <item name="Sphinx4soc :: Components" href="/" />
+      <item name="Sphinx4soc :: Persistence" href="/" />
     </breadcrumbs>
   </body>
 </project>

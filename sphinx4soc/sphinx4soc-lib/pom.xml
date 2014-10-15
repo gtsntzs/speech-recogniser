@@ -3,13 +3,13 @@
   <parent>
     <groupId>soa.speech</groupId>
     <artifactId>sphinx4soc-parent</artifactId>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
     <relativePath>../parent</relativePath>
   </parent>
 
   <groupId>soa.speech</groupId>
   <artifactId>sphinx4soc-lib</artifactId>
-  <version>1.0.5-SNAPSHOT</version>
+  <version>1.0.5</version>
   <packaging>bundle</packaging>
 
   <name>Sphinx4soc Library</name>
@@ -51,10 +51,6 @@
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>joda-time</groupId>
-      <artifactId>joda-time</artifactId>
     </dependency>
 
     <!-- logging -->
@@ -99,7 +95,7 @@
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
-            <Export-Package>soa.speech.recogniser.*</Export-Package>
+            <Export-Package>${project.groupId}.*</Export-Package>
           </instructions>
         </configuration>
       </plugin>

@@ -4,13 +4,13 @@
     <parent>
         <groupId>soa.speech</groupId>
         <artifactId>persistence</artifactId>
-        <version>1.0.5-SNAPSHOT</version>
+        <version>1.0.5</version>
     </parent>
 
     <groupId>soa.speech.persistence</groupId>
     <artifactId>persistence-mongodb</artifactId>
     <packaging>bundle</packaging>
-    <version>1.0.5-SNAPSHOT</version>
+    <version>1.0.5</version>
     <name>persistence-mongodb</name>
 
     <url>${site.url}/persistence/${artifactId}</url>
@@ -39,12 +39,6 @@
             <groupId>org.apache.tika</groupId>
             <artifactId>tika-core</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-        </dependency>
-
 
         <!-- Spring framework -->
         <dependency>
@@ -80,8 +74,9 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
+            <scope>test</scope>
         </dependency>
- 
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -100,6 +95,7 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
+                        <Export-Package>${project.groupId}.*</Export-Package>
                     </instructions>
                 </configuration>
             </plugin>

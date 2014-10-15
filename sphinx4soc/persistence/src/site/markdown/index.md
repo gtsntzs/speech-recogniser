@@ -1,12 +1,14 @@
 ----
 
-## Creating new Components
-
-New components are generated using the [Sphinx4soc :: Component :: Archetype]().
-
 ## Purpose
 
-Components are special services which have the capability to store some amount of messages before they produce a result. For example, in order to estimate the deltas, it is needed at least two previous cepsta to be available. Therefore, a feature vector with deltas is produced only when two messages exist in the component.
+The persistence aggregator module provides examples of usage of various persistence technologies. Main focus is on NoSQL databases. NoSQL databases provide easier cloud support and easy customisation of the stored data. An experiment could shift attention for example on other measures than initially assumed.
 
+## Modules
+
+The NoSQL databases supported so far is:
+
+  * [MongoDB](http://www.mongodb.org/) - more info about the persistence-mongodb module [here]().
+  * [Cassandra](http://cassandra.apache.org/) - TODO
 
 

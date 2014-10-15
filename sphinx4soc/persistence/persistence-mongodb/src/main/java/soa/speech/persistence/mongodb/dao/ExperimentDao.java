@@ -25,14 +25,14 @@ public class ExperimentDao {
         experiment.setName(name);
         experiment.setVersion(version);
         experiment.setSpeechDatabase(mongoTemplate.getDb().getName());
-        experiment.setCorpus(corpus);
+        experiment.setNumOfSamples(corpus);
 
         mongoTemplate.save(experiment, EXPERIMENTS_COLLECTION_NAME);
 
         return experiment;
     }
 
-    public void storeInputExperiment( Experiment experiment) {
+    public void storeInputExperiment( Experiment experiment ) {
         mongoTemplate.save(experiment, EXPERIMENTS_COLLECTION_NAME);
     }
     

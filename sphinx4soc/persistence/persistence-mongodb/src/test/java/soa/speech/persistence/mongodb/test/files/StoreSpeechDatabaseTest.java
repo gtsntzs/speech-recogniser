@@ -52,7 +52,7 @@ public class StoreSpeechDatabaseTest extends AbstractTestNGSpringContextTests {
         
         speechDatabase = new StoreSpeechDatabase();
         speechDatabase.setGridFsTemplate(gridFsTemplate);
-        speechDatabase.setParserClass("soa.speech.recogniser.lib.trancript.Aurora4Parser");
+        speechDatabase.setParserClass("soa.speech.lib.trancript.Aurora4Parser");
         speechDatabase.setSpeechFileExtensions(speechFileExtensions);
         speechDatabase.setSpeechFilesDirectory(speechFilesDirectory);
         speechDatabase.setTranscriptionFile(trancription);

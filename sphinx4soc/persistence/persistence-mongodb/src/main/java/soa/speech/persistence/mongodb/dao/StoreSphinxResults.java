@@ -21,7 +21,7 @@ import edu.cmu.sphinx.frontend.Data;
 /**
  * 
  * @author gorg
- *
+ * 
  */
 public class StoreSphinxResults {
 
@@ -51,9 +51,9 @@ public class StoreSphinxResults {
     public void storeData(Data dataFrame, Map<String, Object> headers) throws Exception {
 
         BasicDBObject sphinxData = storeSphinxData(dataFrame, headers);
-        storeSphinx4socDataStream(sphinxData.getString("_id"), headers); 
+        storeSphinx4socDataStream(sphinxData.getString("_id"), headers);
     }
-    
+
     protected void storeSphinx4socDataStream(String sphinxDataId, Map<String, Object> headers) {
 
         Experiment configuration = (Experiment) headers.get("experiment");
@@ -62,7 +62,7 @@ public class StoreSphinxResults {
 
         //
         String collectionName = configuration.getName() + "-" + configuration.getVersion() + "Result";
-        
+
         Query query = query(where("streamName").is(streamName).and("endpointName").is(endpointName));
 
         if (mongoTemplate.findOne(query, Sphinx4socDataStream.class, collectionName) == null) {
@@ -79,9 +79,8 @@ public class StoreSphinxResults {
             mongoTemplate.findAndModify(query, update.addToSet("dataids", sphinxDataId), Sphinx4socDataStream.class, collectionName);
         }
     }
-    
-    protected BasicDBObject storeSphinxData(Data dataFrame, Map<String, Object> headers) throws Exception 
-    {
+
+    protected BasicDBObject storeSphinxData(Data dataFrame, Map<String, Object> headers) throws Exception {
         Experiment configuration = (Experiment) headers.get("experiment");
         String streamName = (String) headers.get("streamName");
         //
@@ -100,7 +99,20 @@ public class StoreSphinxResults {
         return dbObject;
     }
 
-    public void loadStreamData(Map<String, Object> headers) {
-
+    public MongoTemplate getMongoTemplate() {
+        return mongoTemplate;
     }
+
+    public void setMongoTemplate(MongoTemplate mongoTemplate) {
+        this.mongoTemplate = mongoTemplate;
+    }
+
+    public SequenceDao getSequenceDao() {
+        return sequenceDao;
+    }
+
+    public void setSequenceDao(SequenceDao sequenceDao) {
+        this.sequenceDao = sequenceDao;
+    }
+
 }
