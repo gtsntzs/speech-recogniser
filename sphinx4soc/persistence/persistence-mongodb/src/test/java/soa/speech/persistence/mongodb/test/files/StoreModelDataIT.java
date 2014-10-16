@@ -23,9 +23,9 @@ import soa.speech.persistence.mongodb.files.StoreModelData;
 import com.mongodb.gridfs.GridFSDBFile;
 
 @ContextConfiguration("file:src/test/resources/META-INF/spring/mongodbTestContext.xml")
-public class StoreModelDataTest extends AbstractTestNGSpringContextTests {
+public class StoreModelDataIT extends AbstractTestNGSpringContextTests {
 
-    private static final Logger logger = Logger.getLogger(StoreModelDataTest.class);
+    private static final Logger logger = Logger.getLogger(StoreModelDataIT.class);
 
     @Autowired
     private GridFsTemplate gridFsTemplate;

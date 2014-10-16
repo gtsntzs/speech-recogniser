@@ -22,9 +22,9 @@ import com.mongodb.gridfs.GridFSDBFile;
 
 
 @ContextConfiguration("file:src/test/resources/META-INF/spring/mongodbTestContext.xml")
-public class StoreSpeechDatabaseTest extends AbstractTestNGSpringContextTests {
+public class StoreSpeechDatabaseIT extends AbstractTestNGSpringContextTests {
 
-    private static final Logger logger = Logger.getLogger(StoreSpeechDatabaseTest.class);
+    private static final Logger logger = Logger.getLogger(StoreSpeechDatabaseIT.class);
 
     @Autowired
     private GridFsTemplate gridFsTemplate;
