@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Project License | Model :: Archetype</title>
+		<title>Usage | Archetype :: App</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -18,6 +18,7 @@
 		<link href="./css/bootswatch.css" rel="stylesheet" />
 		<link href="./css/reflow-skin.css" rel="stylesheet" />
 
+		<link href="http://yandex.st/highlightjs/7.5/styles/github.min.css" rel="stylesheet" />
 
 		<link href="./css/lightbox.css" rel="stylesheet" />
 
@@ -47,7 +48,7 @@
 		</script>
 		</head>
 
-	<body class="page-license project-archetype-model" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-index project-archetype-app" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -107,7 +108,7 @@
 		<div class="row" id="banner">
 			<div class="span12">
 				<div class="pull-left">
-					<div id="bannerLeft"><h1><span class="color-highlight">Archetype model </span></h1></div>
+					<div id="bannerLeft"><h1><span class="color-highlight">Archetype app</span></h1></div>
 					<p class="lead">A scalable, modular speech recogniser.</p>
 				</div>
 				<div class="pull-right">
@@ -123,9 +124,9 @@
 				<li class="divider">/</li>
 				<li><a href="../" title="Archetypes :: Parent">Archetypes :: Parent</a></li>
 				<li class="divider">/</li>
-				<li><a href="./" title="Archetype :: Model">Archetype :: Model</a></li>
+				<li><a href="./" title="Archetype :: App">Archetype :: App</a></li>
 				<li class="divider">/</li>
-				<li>Project License</li>
+				<li>Usage</li>
 			</ul>
 		</div>
 	</header>
@@ -134,20 +135,22 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
+<hr /> 
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Overview">Overview</h2>
+  <h2 id="Usage">Usage</h2>
  </div> 
- <a name="Overview"></a> 
- <p>Typically the licenses listed for the project are that of the project itself, and not of dependencies.</p> 
-</div> 
-<div class="section"> 
- <h2 id="Project_License">Project License</h2> 
- <a name="Project_License"></a> 
- <div class="section"> 
-  <h3 id="The_Apache_Software_License_Version_2.0">The Apache Software License, Version 2.0</h3> 
-  <a name="The_Apache_Software_License_Version_2.0"></a> 
-  <p>Can't read the url [http://www.apache.org/licenses/LICENSE-2.0.txt] : connect timed out</p> 
+ <p>In terminal with Apache Maven intalled C&amp;P and give the appropriate names.</p> 
+ <div class="source"> 
+  <pre>mvn archetype:generate \
+   -DarchetypeGroupId=soa.speech.recogniser.archetypes \
+   -DarchetypeArtifactId=archetype-app \
+   -DarchetypeVersion=1.0.5 \
+   -DgroupId=soa.speech.recogniser.app \
+   -DartifactId= \
+   -Dname= \
+   -Dfabric.profile=
+</pre> 
  </div> 
 </div>
 			</div>
@@ -222,16 +225,8 @@
 				<div class="span3 bottom-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">Maven documentation</li>
-						<li class="active">
-							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-down"></i></a>
-							<ul class="nav nav-list">
 						<li >
-							<a href="project-summary.html" title="Project Summary">Project Summary</a>
-						</li>
-						<li class="active">
-							<a href="#" title="Project License">Project License</a>
-						</li>
-							</ul>
+							<a href="project-info.html" title="Project Information">Project Information <i class="icon-chevron-right"></i></a>
 						</li>
 					</ul>
 				</div>
@@ -261,6 +256,7 @@
 	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 	<script src="./js/lightbox.min.js"></script>
 	<script src="./js/reflow-scroll.js"></script>
+	<script src="http://yandex.st/highlightjs/7.5/highlight.min.js"></script>
 
 	<script src="./js/reflow-skin.js"></script>
 
