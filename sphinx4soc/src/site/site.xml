@@ -169,6 +169,7 @@
       <item name="Sphinx4soc Library" href="sphinx4soc-lib/" />
       <item name="Components" href="components/" />
       <item name="Models" href="models/" />
+      <item name="Persistence" href="persistence/" />
       <item name="Archetypes" href="archetypes/" />
       <item name="Sphinxsoc parent" href="sphinx4soc-parent/" />
     </menu>

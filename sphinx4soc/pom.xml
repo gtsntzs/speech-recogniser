@@ -132,8 +132,8 @@
                     <skipDeploy>true</skipDeploy>
                     <!-- Here add the report Plugins -->
                     <reportPlugins>
-                        <!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId> <version>${maven.javadoc.plugin}</version> 
-                            <configuration> <aggregate>true</aggregate> <javadocDirectory>${project.basedir}/src/javadoc</javadocDirectory> <docfilessubdirs>true</docfilessubdirs> 
+                        <!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId> <version>${maven.javadoc.plugin}</version>
+                            <configuration> <aggregate>true</aggregate> <javadocDirectory>${project.basedir}/src/javadoc</javadocDirectory> <docfilessubdirs>true</docfilessubdirs>
                             </configuration> <reportSets> <reportSet> <reports> <report>javadoc</report> </reports> </reportSet> </reportSets> </plugin> -->
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
@@ -149,8 +149,12 @@
                                         <report>summary</report>
                                         <report>modules</report>
                                         <report>license</report>
-                                        <!-- <report>dependencies</report> <report>project-team</report> <report>scm</report> <report>issue-tracking</report> 
-                                            <report>dependency-convergence</report> <report>plugins</report> -->
+                                        <!-- <report>dependencies</report>
+                                             <report>project-team</report>
+                                             <report>scm</report>
+                                             <report>issue-tracking</report>
+                                             <report>dependency-convergence</report>
+                                             <report>plugins</report> -->
                                     </reports>
                                 </reportSet>
                             </reportSets>
