@@ -26,19 +26,18 @@ Lastly, the monitoring component purpose is twofold. The one is the recognition 
 
 ## Project Structure
 
-The project is organised in a multi module maven project. The Maven structure was designed to provide simpicity, easy of use and extendability. Every module has its own documentation site, where purpose and usage is explained.
+The project is organised in a multi module maven project. The Maven structure was designed to provide simpicity, easy of use and extendability. Every module has its own documentation site, where purpose and usage is explained. The modules are organised in four main components:
 
-Sphinx4soc is configured by Blueprint XML files. The Blueprint Specification provides dependency injection and service definition. More on this issue on [configuration]()
+  * [**archetypes**](http://gtsntzs.github.io/speech-recogniser/archetypes) for easy generation of new Sphinx4soc modules
+  * [**components**](http://gtsntzs.github.io/speech-recogniser/components) are extra camel modules
+  * [**persistence**](http://gtsntzs.github.io/speech-recogniser/persistence) the layer storing speech, model files and data created by the recognition process.
+  * the libraries with the original source code of the CMU Sphinx slightly modified in [**cmu-sphinx4**](http://gtsntzs.github.io/speech-recogniser/cmu-sphinx4soc) and additional implementation in module [**sphinx4soc-lib**](http://gtsntzs.github.io/speech-recogniser/sphinx4soc-lib).
 
-[Orchestrating]() services and components is a difficult to define task. Defining a domain language is not trivial, but making use of enterprise integration patterns it is possible every potential team to define its own language according to its needs. For this reason, the integration is made through apache camel where connecting or altering the disparate systems is easy and can be done in real time.
+Sphinx4soc is configured using Spring Context XML files, a nice tutorial about Spring Context and dependency injection can be found in [springindepth](http://www.springindepth.com) and about Camel Context in [Spring Camel DSL](http://camel.apache.org/spring.html).
 
----
+Orchestrating services or components is a difficult to define task. Defining a domain language is not trivial, but making use of enterprise integration patterns it is possible every potential team to define its own domain language according to their needs. For this reason, the integration is made through [Apache Camel](http://camel.apache.org/) where connecting or changing disparate systems is simple and can be done in real time using moderm OSGI container like [fabric8](http://fabric8.io/) or [JBoss Fuse](http://www.jboss.org/products/fuse/overview/)
 
-## Future ideas
-
-Data management
-
- + Apache Stanbol
+ + MongoDB
  + Apache Cassandra
 
 Functionality
