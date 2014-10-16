@@ -8,21 +8,15 @@
 
   <bannerLeft>
     <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
-    <name><![CDATA[<span class="color-highlight">Sphinx4soc Windower</span> Component]]></name>
+    <name><![CDATA[<span class="color-highlight">Sphinx4soc Windower</span> Camel Component]]></name>
   </bannerLeft>
 
   <custom>
     <reflowSkin>
-      <brand>
-        <!-- Brand text in top-left part of the site -->
-        <name><![CDATA[<span class="color-highlight">Back to </span>Main]]></name>
-        <href>http://gtsntzs.github.io/speech-recogniser/</href>
-      </brand>
-
       <pages>
         <index project="sphinx4soc-windower" combine.self="override">
           <!-- no ToC on the index page -->
-          <toc>false</toc>
+          <toc>true</toc>
         </index>
       </pages>
     </reflowSkin>
@@ -30,7 +24,7 @@
 
   <body>
     <breadcrumbs>
-      <item name="Sphinx4soc :: Windower :: Component" href="/" />
+      <item name="Sphinx4soc Windower :: Camel Component" href="/" />
     </breadcrumbs>
   </body>
 </project>

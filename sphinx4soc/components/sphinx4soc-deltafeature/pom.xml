@@ -15,19 +15,19 @@
   <packaging>bundle</packaging>
   <version>1.0.5</version>
 
-  <name>Camel Delta Features Component</name>
+  <name>Delta Features :: Camel Component</name>
 
   <description>
     Sphinx4soc Camel Delta Features Component calculates the delta of the mfcc features.
   </description>
 
-  <url>${site.url}/components/delta-component</url>
+  <url>${site.url}/components/${project.artifactId}</url>
 
   <distributionManagement>
     <site>
       <id>${site.deploy.id}</id>
       <!-- Note that GitHub does not like having leading slash, so make it explicit -->
-      <url>${site.deploy.url}components/delta-component</url>
+      <url>${site.deploy.url}components/${project.artifactId}</url>
     </site>
   </distributionManagement>
 

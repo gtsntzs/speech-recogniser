@@ -7,14 +7,15 @@
 
   <bannerLeft>
     <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
-    <name><![CDATA[<span class="color-highlight">Sphinx4soc model </span>]]></name>
+    <name><![CDATA[<span class="color-highlight">Archetype model </span>]]></name>
   </bannerLeft>
 
   <custom>
     <reflowSkin>
       <pages>
-        <index project="sphinx4soc-model" combine.self="override">
+        <index project="archetype-model" combine.self="override">
           <!-- no ToC on the index page -->
+            <toc>false</toc>
         </index>
       </pages>
     </reflowSkin>
@@ -23,7 +24,7 @@
   <body>
 
     <breadcrumbs>
-      <item name="Sphinx4soc :: Model :: Sample" href="/" />
+      <item name="Archetype :: Model" href="/" />
     </breadcrumbs>
 
   </body>

@@ -27,7 +27,7 @@ a is commonly known as the "alpha" value, it defaults to 0.46, the value for the
 #### URI format
 
 ```URI
-  windowSizeInMs=25.625&amp;windowShiftInMs=12.00&amp;alpha=0.46
+  windower:name?windowSizeInMs=25.625&amp;windowShiftInMs=12.00&amp;alpha=0.46
 ```
 
 #### Options

@@ -9,19 +9,13 @@
 
   <bannerLeft>
     <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
-    <name><![CDATA[<span class="color-highlight">Sphinx4soc</span> Models]]></name>
+    <name><![CDATA[<span class="color-highlight">Model </span> Default]]></name>
   </bannerLeft>
 
   <custom>
     <reflowSkin>
-      <brand>
-        <!-- Brand text in top-left part of the site -->
-        <name><![CDATA[<span class="color-highlight">Back to </span>Main]]></name>
-        <href>http://gtsntzs.github.io/speech-recogniser/</href>
-      </brand>
-
       <pages>
-        <index project="default-models" combine.self="override">
+        <index project="model-default" combine.self="override">
           <!-- no ToC on the index page -->
           <toc>false</toc>
         </index>
@@ -31,7 +25,7 @@
 
   <body>
     <breadcrumbs>
-      <item name="Sphinx4 :: Models" href="/" />
+      <item name="Model::Default" href="/" />
     </breadcrumbs>
   </body>
 </project>

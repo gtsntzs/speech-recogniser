@@ -1,24 +1,17 @@
 ---
 
-## Description
-
-
 ## Usage
 
-mvn archetype:generate \
-   -DarchetypeGroupId=soa.speech.recogniser.archetypes \
-   -DarchetypeArtifactId=archetype-app \
-   -DarchetypeVersion=0.33-SNAPSHOT \
-   -DgroupId=soa.speech.recogniser.app \
-   -DartifactId=amodel \
-   -Dname=test
+In terminal with Apache Maven intalled C&P and give the appropriate names.
 
+```sh
 mvn archetype:generate \
    -DarchetypeGroupId=soa.speech.recogniser.archetypes \
    -DarchetypeArtifactId=archetype-app \
-   -DarchetypeVersion=1.0.3 \
+   -DarchetypeVersion=1.0.5 \
    -DgroupId=soa.speech.recogniser.app \
-   -DartifactId=input-mongodb \
-   -Dname=input-mongodb \
-   -Dfabric.profile=input-mongodb
+   -DartifactId= \
+   -Dname= \
+   -Dfabric.profile=
+```
 

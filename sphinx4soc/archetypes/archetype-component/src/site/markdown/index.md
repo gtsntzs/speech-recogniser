@@ -1,16 +1,17 @@
 ---
 
-## Purpose
-
-A custom Maven Archetype for generating Sphinx4soc camel component projects.
-
 ## Usage
 
+In terminal with Apache Maven intalled C&P and give the appropriate names.
+
+
+```sh
 mvn archetype:generate \
    -DarchetypeGroupId=soa.speech.recogniser.archetypes \
    -DarchetypeArtifactId=component-archetype \
-   -DarchetypeVersion=0.3-SNAPSHOT \
+   -DarchetypeVersion=1.0.5 \
    -DgroupId=soa.speech.recogniser.components \
-   -DartifactId=amodel \
+   -DartifactId= \
    -Dname=test \
    -Dscheme=test
+```

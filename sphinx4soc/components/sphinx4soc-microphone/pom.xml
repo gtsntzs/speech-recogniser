@@ -20,13 +20,13 @@
     Sphinx4soc Camel Microphone Component captures the input of the microphone.
   </description>
 
-  <url>${site.url}/components/microphone-component</url>
+  <url>${site.url}/components/${project.artifactId}</url>
 
   <distributionManagement>
     <site>
       <id>${site.deploy.id}</id>
       <!-- Note that GitHub does not like having leading slash, so make it explicit -->
-      <url>${site.deploy.url}components/microphone-component</url>
+      <url>${site.deploy.url}components/${project.artifactId}</url>
     </site>
   </distributionManagement>
 

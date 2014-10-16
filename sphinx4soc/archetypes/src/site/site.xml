@@ -8,7 +8,7 @@
 
   <bannerLeft>
     <!--         Reflow Maven Skin, but with "Reflow" highlighted -->
-    <name><![CDATA[<span class="color-highlight">Maven Archetypes</span>]]></name>
+    <name><![CDATA[<span class="color-highlight">Sphinx4soc Archetypes</span>]]></name>
   </bannerLeft>
 
   <custom>
@@ -16,7 +16,7 @@
       <brand>
         <!-- Brand text in top-left part of the site -->
         <name><![CDATA[<span class="color-highlight">Back to </span>Main]]></name>
-        <href>http://gtsntzs.github.io/blog/</href>
+        <href>http://gtsntzs.github.io/speech-recogniser/</href>
       </brand>
 
       <pages>

@@ -10,7 +10,7 @@ MongoDB offers a place to store files in a binary form using the GridFS class, t
 
 ## Schema
 
-![mongodbSchema1](/media/Work/workspace/speech-recogniser/sphinx4soc/persistence/persistence-mongodb/src/site/resources/images/sphinx4socMongodb.png "Schema MongoDB")
+![mongodbSchema1](images/sphinx4socMongodb.png "Schema MongoDB")
 
 ## API
 

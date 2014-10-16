@@ -37,6 +37,10 @@ Sphinx4soc is configured using Spring Context XML files, a nice tutorial about S
 
 Orchestrating services or components is a difficult to define task. Defining a domain language is not trivial, but making use of enterprise integration patterns it is possible every potential team to define its own domain language according to their needs. For this reason, the integration is made through [Apache Camel](http://camel.apache.org/) where connecting or changing disparate systems is simple and can be done in real time using moderm OSGI container like [fabric8](http://fabric8.io/) or [JBoss Fuse](http://www.jboss.org/products/fuse/overview/)
 
+---
+
+## Future List
+
  + MongoDB
  + Apache Cassandra
 

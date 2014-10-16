@@ -1,16 +1,16 @@
 ---
 
-## Description
-
-
 ## Usage
 
+In terminal with Apache Maven intalled C&P and give the appropriate names.
+
+```sh
 mvn archetype:generate \
    -DarchetypeGroupId=soa.speech.recogniser.archetypes \
-   -DarchetypeArtifactId=models-archetype \
-   -DarchetypeVersion=0.3-SNAPSHOT \
-   -DgroupId=soa.speech.recogniser.models \
-   -DartifactId=amodel \
-   -Dname=test
-
+   -DarchetypeArtifactId=model-archetype \
+   -DarchetypeVersion=1.0.5 \
+   -DgroupId=soa.speech.recogniser.model \
+   -DartifactId= \
+   -Dname=
+```
 

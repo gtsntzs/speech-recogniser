@@ -13,17 +13,17 @@
   <version>1.0.5</version>
   <packaging>maven-archetype</packaging>
 
-  <name>App :: Archetype</name>
+  <name>Archetype :: App</name>
   <description>
     Creates a new Sphinx4soc App.
   </description>
 
-  <url>${site.url}/archetypes/app-archetype</url>
+  <url>${site.url}/archetypes/${project.artifactId}</url>
 
   <distributionManagement>
     <site>
       <id>${site.deploy.id}</id>
-      <url>${site.deploy.url}archetypes/app-archetype</url>
+      <url>${site.deploy.url}archetypes/${project.artifactId}</url>
     </site>
   </distributionManagement>
 
