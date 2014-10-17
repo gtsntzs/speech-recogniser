@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Purpose | persistence-mongodb</title>
+		<title>Purpose Ο Γιαννης θελει ελληνικα. | persistence-mongodb</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -71,7 +71,6 @@
 									<li ><a href="../../doc/decoder.html" title="Decoder">Decoder</a></li>
 									<li ><a href="../../doc/evaluator.html" title="Monitoring">Monitoring</a></li>
 									<li ><a href="../../doc/" title="Configuration">Configuration</a></li>
-									<li ><a href="../../doc/" title="Orchestration">Orchestration</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -126,7 +125,7 @@
 				<li class="divider">/</li>
 				<li><a href="./" title="Mongodb :: Persistence">Mongodb :: Persistence</a></li>
 				<li class="divider">/</li>
-				<li>Purpose</li>
+				<li>Purpose Ο Γιαννης θελει ελληνικα.</li>
 			</ul>
 		</div>
 		<hr class="toc-separator" />
@@ -140,13 +139,13 @@
 					</a>
 					<div class="nav-collapse collapse" id="toc-nav-collapse">
 						<ul id="toc" class="nav">
-						<li class="toplevel"><a href="#Purpose" title="Purpose">Purpose</a></li>
+						<li class="toplevel"><a href="#Purpose____" title="Purpose Ο Γιαννης θελει ελληνικα.">Purpose Ο Γιαννης θελει ελληνικα.</a></li>
 						<li class="divider-vertical"></li>
 						<li class="toplevel"><a href="#Storing_the_speech_database" title="Storing the speech database">Storing the speech database</a></li>
 						<li class="divider-vertical"></li>
-						<li class="toplevel"><a href="#Schema" title="Schema">Schema</a></li>
+						<li class="toplevel"><a href="#Usage" title="Usage">Usage</a></li>
 						<li class="divider-vertical"></li>
-						<li class="toplevel"><a href="#API" title="API">API</a></li>
+						<li class="toplevel"><a href="#Schema" title="Schema">Schema</a></li>
 						</ul>
 					</div>
 				</div>
@@ -160,21 +159,21 @@
 			<div class="body-content">
 <div class="section"> 
  <div class="page-header">
-  <h2 id="Purpose">Purpose</h2>
+  <h2 id="Purpose____">Purpose Ο Γιαννης θελει ελληνικα.</h2>
  </div> 
- <p>Using MongoDB as the persistence layer. MongoDB is the easiest</p> 
+ <p>Using MongoDB as the persistence layer. MongoDB is the easiest way to get things up and working. It requires to import all data like the speech database, trained models along with their dictionaries and model definitions.</p> 
 </div> 
 <div class="section"> 
  <h2 id="Storing_the_speech_database">Storing the speech database</h2> 
- <p>MongoDB offers a place to store files in a binary form using the GridFS class, the files are stored in the collection fs.files. The schema spesifies the metadata store along with a file.</p> 
+ <p>MongoDB offers a place to store files in a binary form using the GridFS class, the files are stored in the collection fs.files. The schema spesifies the metadata stored along with the files. Importing the data to the database can be done either using the … or with a custom script written in a language supported by mongoDB. The database schema has to be preserved, though.</p> 
+</div> 
+<div class="section"> 
+ <h2 id="Usage">Usage</h2> 
+ <p>In order to use this module you need to have a mongoDB instance up and running. Best way of starting a mongoDB instance is to use the <a class="externalLink" href="https://www.docker.com/" target="_blank">docker</a> platform. An example of using Sphinx4soc with mongoDB and docker take a look at the <a href="" target="_blank">input-mongodb</a> App.</p> 
 </div> 
 <div class="section"> 
  <h2 id="Schema">Schema</h2> 
  <p><img src="images/sphinx4socMongodb.png" alt="mongodbSchema1" /></p> 
-</div> 
-<div class="section"> 
- <h2 id="API">API</h2> 
- <p><i>Storing Sphinx Data object</i> <b>Arguments</b>: + <b>dataFrame</b> as Data object –&gt; the + <b>headers</b> as Map&lt;String, Object&gt; object –&gt; contains the metadata to store. + <b>experiment</b> as Experiment object –&gt; the current experiment + <b>streamName</b> as String –&gt; the name of a file + <b>endpointName</b> as String –&gt; the name of the endpoint created the data. + <b>Exception</b> –&gt; when the database or collection does not exist.</p> 
 </div>
 			</div>
 		</div>
@@ -213,9 +212,6 @@
 						</li>
 						<li >
 							<a href="../../doc/" title="Configuration">Configuration</a>
-						</li>
-						<li >
-							<a href="../../doc/" title="Orchestration">Orchestration</a>
 						</li>
 					</ul>
 				</div>
