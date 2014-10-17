@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>Creating new models | Sphinx4 Models</title>
+		<title> | Sphinx4 Models</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -123,7 +123,7 @@
 				<li class="divider">/</li>
 				<li><a href="./" title="Sphinx4soc :: Models">Sphinx4soc :: Models</a></li>
 				<li class="divider">/</li>
-				<li>Creating new models</li>
+				<li></li>
 			</ul>
 		</div>
 	</header>
@@ -132,48 +132,49 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-<hr /> 
-<div class="section"> 
- <div class="page-header">
-  <h2 id="Creating_new_models">Creating new models</h2>
- </div> 
- <p>New model container are generated using the <a href="">Sphinx4soc :: Models :: Archetype</a>.</p> 
-</div> 
-<div class="section"> 
- <h2 id="Purpose">Purpose</h2> 
- <p>Sphinx4soc models define a directory structure for organising the files which contain the following files</p> 
- <ul> 
-  <li>the grammar file contains the grammatical rules for the voice interface</li> 
-  <li>the acoustic models for acoustic scoring</li> 
-  <li>the dictionary is a list of accepted words</li> 
-  <li>the mdef files contain the weights over word selection</li> 
-  <li>finally, in trigram are stored the language models</li> 
- </ul> 
- <div class="source"> 
-  <pre>  resources
-   └── default
-       ├── grammar
-       │&nbsp;&nbsp; └── aGrammar.gram
-       ├── models
-       │&nbsp;&nbsp; ├── cd_continuous_8gau
-       │&nbsp;&nbsp; │&nbsp;&nbsp; ├── means
-       │&nbsp;&nbsp; │&nbsp;&nbsp; ├── mixture_weights
-       │&nbsp;&nbsp; │&nbsp;&nbsp; ├── transition_matrices
-       │&nbsp;&nbsp; │&nbsp;&nbsp; └── variances
-       │&nbsp;&nbsp; ├── dict
-       │&nbsp;&nbsp; │&nbsp;&nbsp; ├── cmudict.0.6d
-       │&nbsp;&nbsp; │&nbsp;&nbsp; └── fillerdict
-       │&nbsp;&nbsp; ├── etc
-       │&nbsp;&nbsp; │&nbsp;&nbsp; ├── variables.def
-       │&nbsp;&nbsp; │&nbsp;&nbsp; ├── WSJ_clean_13dCep_16k_40mel_130Hz_6800Hz.4000.mdef
-       │&nbsp;&nbsp; │&nbsp;&nbsp; └── WSJ_clean_13dCep_16k_40mel_130Hz_6800Hz.ci.mdef
-       │&nbsp;&nbsp; ├── license.terms
-       │&nbsp;&nbsp; └── README
-       └── trigram
-           └── tcb05cnp.Z.DMP
-</pre> 
- </div> 
-</div>
+<p>Sphinx4soc models define a directory structure for organising the files which contain the following files</p>
+
+<ul>
+  
+<li>the grammar file contains the grammatical rules for the voice interface</li>
+  
+<li>the acoustic models for acoustic scoring</li>
+  
+<li>the dictionary is a list of accepted words</li>
+  
+<li>the mdef files contain the weights over word selection</li>
+  
+<li>finally, in trigram are stored the language models</li>
+</ul>
+
+<div class="source">
+<pre>  resources
+   &#x2514;&#x2500;&#x2500; default
+       &#x251c;&#x2500;&#x2500; grammar
+       &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; aGrammar.gram
+       &#x251c;&#x2500;&#x2500; models
+       &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; cd_continuous_8gau
+       &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; means
+       &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; mixture_weights
+       &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; transition_matrices
+       &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; variances
+       &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; dict
+       &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; cmudict.0.6d
+       &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; fillerdict
+       &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; etc
+       &#x2502;&#xa0;&#xa0; &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; 13dCep_16k_40mel_130Hz_6800Hz.ci.mdef
+       &#x2502;&#xa0;&#xa0; &#x251c;&#x2500;&#x2500; license.terms
+       &#x2502;&#xa0;&#xa0; &#x2514;&#x2500;&#x2500; README
+       &#x2514;&#x2500;&#x2500; trigram
+           &#x2514;&#x2500;&#x2500; tcb05cnp.Z.DMP
+</pre></div>
+<p>New model container are generated using the <a class="externalLink" href="http://gtsntzs.github.io/speech-recogniser/archetypes/archetype-model/index.html">Sphinx4soc :: Models :: Archetype</a>.</p>
+<p>The models currently available</p>
+
+<ul>
+  
+<li><a href="models-default/index.html">models-default</a></li>
+</ul>
 			</div>
 		</div>
 	</div>
