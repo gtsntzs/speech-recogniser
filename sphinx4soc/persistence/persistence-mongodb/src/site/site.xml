@@ -22,7 +22,7 @@
       <pages>
         <index project="sphinx4soc-microphone" combine.self="override">
           <!-- no ToC on the index page -->
-          <toc>false</toc>
+          <toc>true</toc>
         </index>
       </pages>
     </reflowSkin>

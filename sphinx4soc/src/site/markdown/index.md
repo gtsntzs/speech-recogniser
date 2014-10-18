@@ -1,5 +1,6 @@
 ## Idea
 
+
 Every scientific community faces the problem of having to create frameworks either from scratch or patches in an existing one, in order to apply their new ideas. Creating a framework from scratch is demanding, patches usually do not follow any programming contract and thereafter are difficult to reuse and benefit from them. This paper creates a new environment where Automatic Speech Recognition (ASR) community can take advantage of Service Orientated Computing (SOC). An existing ASR framework will be broken into its elementary parts and assembled back together making use of the enterprise integration patterns (EIP). Resulting in a framework flexible to alter, fast to execute, independent from conventional programming languages and providing a universal testing environment for evaluating different approaches.
 
 The abstract of the [paper]() where the idea was first published.

@@ -161,7 +161,6 @@
       <item name="Decoder" href="doc/decoder.html" />
       <item name="Monitoring" href="doc/evaluator.html" />
       <item name="Configuration" href="doc/" />
-      <item name="Orchestration" href="doc/" />
     </menu>
 
     <menu name="Modules" inherit="bottom">

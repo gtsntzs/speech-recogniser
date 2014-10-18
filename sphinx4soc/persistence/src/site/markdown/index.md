@@ -3,7 +3,7 @@ The persistence aggregator module provides examples of usage of various persiste
 
 The NoSQL databases supported so far is:
 
-  * persistence-mongodb - persistence layer using <a href="http://www.mongodb.org/" target="_blank">MongoDB</a> NoSQL database.
+  * [**persistence-mongodb**](persistence-mongodb/index.html) - persistence layer using <a href="http://www.mongodb.org/" target="_blank">MongoDB</a> NoSQL database.
   * [Cassandra](http://cassandra.apache.org/) - TODO
 
 

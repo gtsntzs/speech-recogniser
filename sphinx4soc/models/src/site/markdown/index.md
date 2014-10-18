@@ -1,10 +1,3 @@
-----
-
-## Creating new models
-
-New model container are generated using the [Sphinx4soc :: Models :: Archetype]().
-
-## Purpose
 
 Sphinx4soc models define a directory structure for organising the files which contain the following files
 
@@ -29,11 +22,15 @@ Sphinx4soc models define a directory structure for organising the files which co
        │   │   ├── cmudict.0.6d
        │   │   └── fillerdict
        │   ├── etc
-       │   │   ├── variables.def
-       │   │   ├── WSJ_clean_13dCep_16k_40mel_130Hz_6800Hz.4000.mdef
-       │   │   └── WSJ_clean_13dCep_16k_40mel_130Hz_6800Hz.ci.mdef
+       │   │   └── 13dCep_16k_40mel_130Hz_6800Hz.ci.mdef
        │   ├── license.terms
        │   └── README
        └── trigram
            └── tcb05cnp.Z.DMP
 ```
+
+New model container are generated using the [Sphinx4soc :: Models :: Archetype](http://gtsntzs.github.io/speech-recogniser/archetypes/archetype-model/index.html).
+
+The models currently available
+
+   * [model-default](model-default/index.html)
