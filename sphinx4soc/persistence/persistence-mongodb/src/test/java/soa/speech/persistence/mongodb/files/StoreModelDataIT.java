@@ -1,4 +1,4 @@
-package soa.speech.persistence.mongodb.test.files;
+package soa.speech.persistence.mongodb.files;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
@@ -15,10 +15,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import soa.speech.persistence.mongodb.files.StoreModelData;
 
 import com.mongodb.gridfs.GridFSDBFile;
 
@@ -42,7 +41,6 @@ public class StoreModelDataIT extends AbstractTestNGSpringContextTests {
                 .is(mongoTemplate.getDb().getName()).and("metadata.modelName").is("WSJ_clean_13dCep_16k_40mel_130Hz_6800Hz")));
 
         Assert.assertEquals(meanFile.size(), 1, "failed :(");
-
     }
 
     @BeforeClass
@@ -86,9 +84,10 @@ public class StoreModelDataIT extends AbstractTestNGSpringContextTests {
         storeModelData.storeModelFiles();
     }
 
-    @AfterClass
+    @AfterTest
     public void cleanUp() {
         mongoTemplate.getDb().dropDatabase();
         logger.info("Speech database droped");
     }
+    
 }

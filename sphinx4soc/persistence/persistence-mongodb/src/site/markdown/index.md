@@ -9,7 +9,11 @@ MongoDB offers a place to store files in a binary form using the GridFS class, t
 
 ## Usage
 
-In order to use this module you need to have a mongoDB instance up and running. Best way of starting a mongoDB instance is to use the <a href="https://www.docker.com/" target="_blank">docker</a> platform. An example of using Sphinx4soc with mongoDB and docker take a look at the <a href="" target="_blank">input-mongodb</a> App.
+In order to building this module it is needed a mongoDB instance up and running. The MongoDB instance has to run with host IP "172.17.0.3" at 27017 port, otherwise one could change the properties file in test resources. Best way of starting a mongoDB instance is to use the <a href="https://www.docker.com/" target="_blank">docker</a> platform. Hopefully, by the end of this year there will be an official maven plugin to make integration tests of this kind much simpler. Another option is to skip the integration tests with the command
+
+```sh
+  mvn install -DskipITs
+```
 
 ## Schema
 

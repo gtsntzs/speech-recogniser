@@ -3,9 +3,11 @@ package soa.speech.persistence.mongodb.dao;
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 
@@ -16,6 +18,7 @@ import com.mongodb.gridfs.GridFSDBFile;
 
 public class LoadSamplesIterator {
 
+    private static final Logger logger = Logger.getLogger(LoadSamplesIterator.class);
     /** Compressed comment. */
     private GridFsTemplate gridFsTemplate;
     /** Compressed comment. */
@@ -28,15 +31,22 @@ public class LoadSamplesIterator {
         this.experiment = experiment;
     }
 
+    /**
+     *  Method initialization   
+     *  Using GridFSDBFile to make queries unfortunately limit predicate isn't supported 
+     *  https://jira.spring.io/browse/DATAMONGO-765
+     */
     public void init() {
 
-        Query query = query(where("metadata.type").is("speech"));
-
-        if (experiment.getCorpus().equalsIgnoreCase(Corpus.LIMIT.name())) {
-            query.limit(experiment.getNumOfSamples());
-        }
+        Query query = null;
+        query = query(where("metadata.type").is("speech"));
         List<GridFSDBFile> speechFiles = gridFsTemplate.find(query);
-        speechFilesItr = speechFiles.iterator();
+
+        if (experiment.getCorpus().equalsIgnoreCase(Corpus.LIMIT.name()) ) {
+            speechFilesItr = Collections.synchronizedList(speechFiles.subList(0, experiment.getNumOfSamples())).iterator();
+        } else {
+            speechFilesItr = Collections.synchronizedList(speechFiles).iterator();
+        }
     }
 
     public boolean hasNext() {

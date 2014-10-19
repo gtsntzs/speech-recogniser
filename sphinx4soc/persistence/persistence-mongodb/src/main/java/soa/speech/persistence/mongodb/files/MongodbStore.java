@@ -9,6 +9,7 @@ import java.util.Map;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.log4j.Logger;
 import org.apache.tika.Tika;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 
 import com.mongodb.BasicDBObject;
@@ -18,6 +19,8 @@ public class MongodbStore {
     private static final Logger logger = Logger.getLogger(MongodbStore.class);
 
     protected GridFsTemplate gridFsTemplate;
+    
+    protected MongoTemplate mongoTemplate;
     
     public void storeFile(File file, Map<String, Object> metadata) throws IOException {
         
@@ -45,4 +48,11 @@ public class MongodbStore {
         this.gridFsTemplate = gridFsTemplate;
     }
 
+    public MongoTemplate getMongoTemplate() {
+        return mongoTemplate;
+    }
+
+    public void setMongoTemplate(MongoTemplate mongoTemplate) {
+        this.mongoTemplate = mongoTemplate;
+    }
 }

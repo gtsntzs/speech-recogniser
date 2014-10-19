@@ -18,20 +18,20 @@ public class SequenceDaoImpl implements SequenceDao {
     @Override
     public long getNextSequenceId(String key) throws Exception {
 
-        // get sequence id
         Query query = new Query(Criteria.where("_id").is(key));
 
         // increase sequence id by 1
         Update update = new Update();
-        update.inc("seq", 1);
+        update.inc("sequence", 1);
 
         // return new increased id
         FindAndModifyOptions options = new FindAndModifyOptions();
         options.returnNew(true);
 
         // this is the magic happened.
-        SequenceId seqId = mongoTemplate.findAndModify(query, update, options, SequenceId.class);
-
+        SequenceId seqId = mongoTemplate.findAndModify(query, update, options, SequenceId.class, key);
+        
+        
         // if no id, throws SequenceException
         // optional, just a way to tell user when the sequence id is failed to generate.
         if (seqId == null) {

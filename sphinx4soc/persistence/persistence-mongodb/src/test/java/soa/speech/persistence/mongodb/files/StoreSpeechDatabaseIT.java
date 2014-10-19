@@ -1,4 +1,4 @@
-package soa.speech.persistence.mongodb.test.files;
+package soa.speech.persistence.mongodb.files;
 
 import static org.springframework.data.mongodb.core.query.Criteria.where;
 import static org.springframework.data.mongodb.core.query.Query.query;
@@ -12,14 +12,10 @@ import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import soa.speech.persistence.mongodb.files.StoreSpeechDatabase;
-
 import com.mongodb.gridfs.GridFSDBFile;
-
 
 @ContextConfiguration("file:src/test/resources/META-INF/spring/mongodbTestContext.xml")
 public class StoreSpeechDatabaseIT extends AbstractTestNGSpringContextTests {
@@ -28,7 +24,6 @@ public class StoreSpeechDatabaseIT extends AbstractTestNGSpringContextTests {
 
     @Autowired
     private GridFsTemplate gridFsTemplate;
-    
     @Autowired
     private MongoTemplate mongoTemplate;
     
@@ -42,25 +37,28 @@ public class StoreSpeechDatabaseIT extends AbstractTestNGSpringContextTests {
     }
     
     @BeforeClass
-    public void importSpeechFiles() throws Exception{
+    public void importSpeechData() throws Exception {
 
         String trancription = getClass().getResource("/data/transcription/wordTranscription.mlf").getFile();
         String speechFilesDirectory = getClass().getResource("/data/db/").getFile();
 
+        logger.info("trans " + trancription);
+        logger.info("speechFilesDirectory " + speechFilesDirectory);
+        
         String[] speechFileExtensions = new String[1];
         speechFileExtensions[0] = "wv1";
-        
+
         speechDatabase = new StoreSpeechDatabase();
         speechDatabase.setGridFsTemplate(gridFsTemplate);
+        speechDatabase.setMongoTemplate(mongoTemplate); 
         speechDatabase.setParserClass("soa.speech.lib.trancript.Aurora4Parser");
         speechDatabase.setSpeechFileExtensions(speechFileExtensions);
         speechDatabase.setSpeechFilesDirectory(speechFilesDirectory);
         speechDatabase.setTranscriptionFile(trancription);
         speechDatabase.store();
-        logger.info("Speech database created"); 
+        logger.info("Speech database created");
     }
 
-    @AfterClass
     public void cleanUp() {
         mongoTemplate.getDb().dropDatabase();
         logger.info("Speech database droped");

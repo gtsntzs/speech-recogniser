@@ -50,13 +50,10 @@ public class StoreSpeechDatabase extends MongodbStore {
     }
 
     protected boolean fileExists(File file) {
-        Query query = new Query();
-        Criteria criteria = new Criteria();
-        criteria = criteria.and("fileName").is(file.getName());
-        query.addCriteria(criteria);
-        GridFSDBFile results = gridFsTemplate.findOne(query);
-
-        return results == null ? false : true;
+        
+        Query query = new Query(Criteria.where("fileName").is(file.getName()));
+        boolean exists = mongoTemplate.exists(query, "fs.files");
+        return exists == false ? false : true;
     }
 
     protected Map<String, String> loadTranscript() throws Exception {

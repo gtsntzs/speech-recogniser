@@ -24,7 +24,7 @@ import edu.cmu.sphinx.frontend.Data;
  * 
  */
 public class StoreSphinxResults {
-
+    
     /** Compressed comment. */
     private MongoTemplate mongoTemplate;
 
@@ -61,7 +61,7 @@ public class StoreSphinxResults {
         String endpointName = (String) headers.get("endpointName");
 
         //
-        String collectionName = configuration.getName() + "-" + configuration.getVersion() + "Result";
+        String collectionName = configuration.getName() + "-" + configuration.getVersion()+"-" + "Result";
 
         Query query = query(where("streamName").is(streamName).and("endpointName").is(endpointName));
 
@@ -84,14 +84,15 @@ public class StoreSphinxResults {
         Experiment configuration = (Experiment) headers.get("experiment");
         String streamName = (String) headers.get("streamName");
         //
-        String collectionName = configuration.getName() + "-" + configuration.getVersion() + "Result";
+        String collectionName = configuration.getName() + "-" + configuration.getVersion() +"-" + "Result";
 
         if (!mongoTemplate.collectionExists(collectionName)) {
             mongoTemplate.createCollection(collectionName);
         }
 
-        BasicDBObject dbObject = new BasicDBObject(streamName, dataFrame);
         long nextSequenceId = sequenceDao.getNextSequenceId(collectionName);
+
+        BasicDBObject dbObject = new BasicDBObject(streamName, dataFrame);
         dbObject.put("_id", nextSequenceId);
         dbObject.append("className", dataFrame.getClass().getCanonicalName());
         mongoTemplate.save(dataFrame, collectionName);
