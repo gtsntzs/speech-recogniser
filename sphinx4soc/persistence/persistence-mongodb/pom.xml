@@ -4,13 +4,13 @@
     <parent>
         <groupId>soa.speech</groupId>
         <artifactId>persistence</artifactId>
-        <version>1.0.5</version>
+        <version>1.0.6-SNAPSHOT</version>
     </parent>
 
     <groupId>soa.speech.persistence</groupId>
     <artifactId>persistence-mongodb</artifactId>
     <packaging>bundle</packaging>
-    <version>1.0.5</version>
+    <version>1.0.6-SNAPSHOT</version>
     <name>persistence-mongodb</name>
 
     <url>${site.url}/persistence/${project.artifactId}</url>

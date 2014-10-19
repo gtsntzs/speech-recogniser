@@ -7,13 +7,13 @@
   <parent>
     <artifactId>components</artifactId>
     <groupId>soa.speech</groupId>
-    <version>1.0.5</version>
+    <version>1.0.6-SNAPSHOT</version>
   </parent>
 
   <groupId>soa.speech.components</groupId>
   <artifactId>sphinx4soc-deltafeature</artifactId>
   <packaging>bundle</packaging>
-  <version>1.0.5</version>
+  <version>1.0.6-SNAPSHOT</version>
 
   <name>Delta Features :: Camel Component</name>
 
