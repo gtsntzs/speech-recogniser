@@ -17,9 +17,6 @@ public class StreamRawAudioDynamicRouter {
 
 	private static final Logger log = Logger.getLogger( StreamRawAudioDynamicRouter.class );
 	
-	// private final String outEndpoind;
-	//
-	// private final String streamSourceEndpoint;
 	private final String[] sequence;
 
 	public StreamRawAudioDynamicRouter(String[] sequence) {
@@ -38,7 +35,6 @@ public class StreamRawAudioDynamicRouter {
 	 */
 	public String route(Exchange ex) throws Exception {
 		Data data = ex.getIn().getBody(Data.class);
-		log.info("Recieved data of type " + data.getClass().getCanonicalName()); 
 		return next(data);
 	}
 
@@ -58,6 +54,7 @@ public class StreamRawAudioDynamicRouter {
 	 */
 	private String next(Data data) {
 		if (data != null) {
+		    log.info("Recieved data of type " + data.getClass().getCanonicalName()); 
 			String buildSequence = buildSequence();
 			return buildSequence;
 		} else {

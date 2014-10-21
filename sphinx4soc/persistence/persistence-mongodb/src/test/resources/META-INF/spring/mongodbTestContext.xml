@@ -6,7 +6,7 @@
                            http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-1.5.xsd
                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-    <context:property-placeholder location="classpath:/META-INF/mongodbTest.properties" />
+    <context:property-placeholder location="classpath:/META-INF/application.properties" />
 
     <mongo:mongo id="mongo" host="${mongo.host}" port="${mongo.port}">
         <mongo:options connections-per-host="8" />

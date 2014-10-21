@@ -32,17 +32,16 @@ public class LoadSamplesIterator {
     }
 
     /**
-     *  Method initialization   
-     *  Using GridFSDBFile to make queries unfortunately limit predicate isn't supported 
-     *  https://jira.spring.io/browse/DATAMONGO-765
+     * Method initialization Using GridFSDBFile to make queries unfortunately limit predicate isn't
+     * supported https://jira.spring.io/browse/DATAMONGO-765
      */
     public void init() {
-
-        Query query = null;
-        query = query(where("metadata.type").is("speech"));
+        Query query = query(where("metadata.type").is("speech"));
         List<GridFSDBFile> speechFiles = gridFsTemplate.find(query);
 
-        if (experiment.getCorpus().equalsIgnoreCase(Corpus.LIMIT.name()) ) {
+        logger.info("Found number of speech Files " + speechFiles.size());
+        if (Corpus.LIMIT.name().equalsIgnoreCase(experiment.getCorpus())) {
+            logger.info(" limit to " + experiment.getNumOfSamples() +" samples"); 
             speechFilesItr = Collections.synchronizedList(speechFiles.subList(0, experiment.getNumOfSamples())).iterator();
         } else {
             speechFilesItr = Collections.synchronizedList(speechFiles).iterator();
@@ -55,7 +54,9 @@ public class LoadSamplesIterator {
 
     public GridFSDBFile next() {
         if (speechFilesItr.hasNext()) {
-            return speechFilesItr.next();
+            GridFSDBFile next = speechFilesItr.next();
+            logger.info("Streaming file " + next.getFilename());
+            return next;
         } else {
             return null;
         }
